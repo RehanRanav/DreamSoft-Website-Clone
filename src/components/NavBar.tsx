@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { Card, Carousel } from "flowbite-react";
 import logo from "../assets/logo-dreamsoft.png";
@@ -12,9 +12,15 @@ import { IoSearchOutline } from "react-icons/io5";
 import { PiShareNetworkLight } from "react-icons/pi";
 import { MdOutlineCancel } from "react-icons/md";
 import { AiOutlineZoomIn } from "react-icons/ai";
+import { FaFacebookF } from "react-icons/fa6";
+import { FaTwitter } from "react-icons/fa6";
+import { FaGooglePlusG } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa6";
+import Hamburger from "./Hamburger";
 
 const NavBar = () => {
   const [enableSearch, setEnableSearch] = useState(false);
+  const menuRef = useRef<HTMLDivElement | null>(null);
 
   const handleSearchtoggle = () => {
     setEnableSearch(!enableSearch);
@@ -24,13 +30,24 @@ const NavBar = () => {
     <div className="w-full h-1 bg-[#756aee] opacity-0 group-hover:opacity-100 group-hover:transform group-hover:-translate-y-[2px] transition-opacity duration-500 ease-in-out"></div>
   );
 
+  const showShareOptions = () => {
+    if (menuRef.current) {
+      if (menuRef.current.style.display === "none")
+        menuRef.current.style.display = "flex";
+      else menuRef.current.style.display = "none";
+    }
+  };
+
   return (
-    <div className="flex justify-between items-center pl-4 pr-16 bg-slate-200 h-20">
+    <div className="flex justify-between items-center gap-2 pl-4 pr-16 h-20">
+      <div className="hidden h-fit w-fit md:block">
+        <Hamburger />
+      </div>
       <div id="logo-container" className="flex-auto">
         <img src={logo} alt="DreamSoft" className="lg:w-36 lg:h-10 " />
       </div>
       {!enableSearch ? (
-        <div className="flex-2 flex justify-between items-center h-4 font-sans font-medium text-lg">
+        <div className="flex-2 flex justify-between items-center gap-2 h-4 font-sans font-medium text-lg whitespace-nowrap md:hidden">
           <Link to="/" className="group">
             <div>Home</div>
             <HoverlineEffect />
@@ -38,9 +55,12 @@ const NavBar = () => {
           <Link to="/" className="group">
             <div>About Us</div> <HoverlineEffect />
           </Link>
-          <Link to="/" className="group relative">
+          <Link
+            to="/"
+            className="group relative h-16 flex flex-col justify-center items-center"
+          >
             <div>Gallery</div> <HoverlineEffect />
-            <Card className="rounded-none w-60 px-4 absolute top-16 whitespace-nowrap opacity-0 group-hover:opacity-100 hidden group-hover:block hover:block group-hover:transform group-hover:top-14 transition-all duration-300 ease-in">
+            <Card className="rounded-none w-60 px-4 mt-2 absolute left-0 whitespace-nowrap hidden group-hover:block hover:block group-hover:transform group-hover:top-14 transition-all duration-300 ease-in">
               <ul className="flex flex-col gap-3">
                 <li className="hover:border-l-4 hover:border-[#756aee] hover:pl-4 transition-all duration-300 ease-in-out">
                   Full width Gallery
@@ -61,9 +81,12 @@ const NavBar = () => {
           <Link to="/" className="group">
             <div>Pricing</div> <HoverlineEffect />
           </Link>
-          <Link to="/" className="group relative">
+          <Link
+            to="/"
+            className="group relative h-16 flex flex-col justify-center items-center"
+          >
             <div>Blog</div> <HoverlineEffect />
-            <Card className="rounded-none w-60 px-4 absolute top-16 whitespace-nowrap opacity-0 group-hover:opacity-100 hidden group-hover:block hover:block group-hover:transform group-hover:top-14 transition-all duration-300 ease-in">
+            <Card className="rounded-none w-60 px-4 mt-2 absolute left-0 whitespace-nowrap hidden group-hover:block hover:block group-hover:transform group-hover:top-14 transition-all duration-300 ease-in">
               <ul className="flex flex-col gap-3">
                 {[
                   ["Classic Blog"],
@@ -82,13 +105,16 @@ const NavBar = () => {
           <Link to="/" className="group">
             <div>Contact Us</div> <HoverlineEffect />
           </Link>
-          <Link to="/" className="group relative flex items-center">
+          <Link
+            to="/"
+            className="group relative h-16 flex flex-col justify-center items-center"
+          >
             <div>Pages</div> <HoverlineEffect />
-            <Card className="rounded-none w-screen px-4 absolute -right-[150px] whitespace-nowrap hidden group-hover:block hover:block group-hover:transform group-hover:top-14 transition-display transition-all duration-1000 ease-in">
+            <Card className="rounded-none w-screen px-4 mt-2 absolute -right-[158px] whitespace-nowrap hidden group-hover:block hover:block group-hover:transform group-hover:top-14 transition-display transition-all duration-1000 ease-in">
               <div className="grid grid-cols-3 gap-4">
                 <div className="border-r-2 font-normal">
                   <div>Elements</div>
-                  <ul className="grid grid-cols-2 grid-rows-6">
+                  <ul className="grid grid-cols-2 grid-rows-5">
                     {[
                       ["Typography"],
                       ["Calls to Action"],
@@ -101,7 +127,7 @@ const NavBar = () => {
                       [""],
                       ["Grid System"],
                     ].map(([item]) => (
-                      <li className="hover:border-l-4 hover:border-[#756aee] hover:pl-4 transition-all duration-300 ease-in-out">
+                      <li className="hover:border-l-4 hover:border-[#756aee] hover:pl-4 transition-all duration-300 ease-in-out whitespace-normal">
                         {item}
                       </li>
                     ))}
@@ -112,18 +138,20 @@ const NavBar = () => {
                   <div>Additional Pages</div>
                   <ul className="grid grid-cols-2 grid-rows-6">
                     {[
-                      ["Typography"],
-                      ["Calls to Action"],
-                      ["Icons with Text"],
-                      ["Progress Bars"],
-                      ["Buttons"],
-                      ["Tabs and Accordions"],
-                      ["Forms"],
-                      ["Hover Effects"],
-                      [""],
-                      ["Grid System"],
+                      ["Service"],
+                      ["503 Page"],
+                      ["Service 2"],
+                      ["Pricing"],
+                      ["Single Service"],
+                      ["Coming Soon"],
+                      ["Our Team"],
+                      ["Contact Us 2"],
+                      ["Testimonials"],
+                      ["FAQ"],
+                      ["404 Page"],
+                      ["Search Results"],
                     ].map(([item]) => (
-                      <li className="hover:border-l-4 hover:border-[#756aee] hover:pl-4 transition-all duration-300 ease-in-out">
+                      <li className="hover:border-l-4 hover:border-[#756aee] hover:pl-4 transition-all duration-300 ease-in-out whitespace-normal">
                         {item}
                       </li>
                     ))}
@@ -141,7 +169,7 @@ const NavBar = () => {
                     >
                       <div className="grid grid-cols-2 gap-2">
                         <div
-                          className={`h-fit w-fit bg-no-repeat bg-cover bg-center transition duration-300 ease-in-out relative cursor-pointer`}
+                          className={`h-full w-1/2 bg-no-repeat bg-cover bg-center transition duration-300 ease-in-out relative cursor-pointer`}
                           style={{
                             backgroundImage: `url(${NavbarImg1})`,
                             height: "140px",
@@ -151,7 +179,9 @@ const NavBar = () => {
                           <div className="absolute inset-0 bg-gray-500 opacity-0 hover:opacity-50 hover:scale-105 transition-all duration-300 ease-in-out">
                             <div className="m-2 ml-3 border h-[124px] border-white flex flex-col gap-2 justify-center items-center text-white">
                               <AiOutlineZoomIn size={30} />
-                              <div className="hover:border-b-2 border-b-white">Project #1</div>
+                              <div className="hover:border-b-2 border-b-white">
+                                Project #1
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -166,7 +196,9 @@ const NavBar = () => {
                           <div className="absolute inset-0 bg-gray-500 opacity-0 hover:opacity-50 hover:scale-105 transition-all duration-300 ease-in-out">
                             <div className="m-2 ml-3 border h-[124px] border-white flex flex-col gap-2 justify-center items-center text-white">
                               <AiOutlineZoomIn size={30} />
-                              <div className="hover:border-b-2 border-b-white">Project #2</div>
+                              <div className="hover:border-b-2 border-b-white">
+                                Project #2
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -183,7 +215,9 @@ const NavBar = () => {
                           <div className="absolute inset-0 bg-gray-500 opacity-0 hover:opacity-50 hover:scale-105 transition-all duration-300 ease-in-out">
                             <div className="m-2 ml-3 border h-[124px] border-white flex flex-col gap-2 justify-center items-center text-white">
                               <AiOutlineZoomIn size={30} />
-                              <div className="hover:border-b-2 border-b-white">Project #3</div>
+                              <div className="hover:border-b-2 border-b-white">
+                                Project #3
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -198,7 +232,9 @@ const NavBar = () => {
                           <div className="absolute inset-0 bg-gray-500 opacity-0 hover:opacity-50 hover:scale-105 transition-all duration-300 ease-in-out">
                             <div className="m-2 ml-3 border h-[124px] border-white flex flex-col gap-2 justify-center items-center text-white">
                               <AiOutlineZoomIn size={30} />
-                              <div className="hover:border-b-2 border-b-white">Project #4</div>
+                              <div className="hover:border-b-2 border-b-white">
+                                Project #4
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -215,7 +251,9 @@ const NavBar = () => {
                           <div className="absolute inset-0 bg-gray-500 opacity-0 hover:opacity-50 hover:scale-105 transition-all duration-300 ease-in-out">
                             <div className="m-2 ml-3 border h-[124px] border-white flex flex-col gap-2 justify-center items-center text-white">
                               <AiOutlineZoomIn size={30} />
-                              <div className="hover:border-b-2 border-b-white">Project #5</div>
+                              <div className="hover:border-b-2 border-b-white">
+                                Project #5
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -230,7 +268,9 @@ const NavBar = () => {
                           <div className="absolute inset-0 bg-gray-500 opacity-0 hover:opacity-50 hover:scale-105 transition-all duration-300 ease-in-out">
                             <div className="m-2 ml-3 border h-[124px] border-white flex flex-col gap-2 justify-center items-center text-white">
                               <AiOutlineZoomIn size={30} />
-                              <div className="hover:border-b-2 border-b-white">Project #6</div>
+                              <div className="hover:border-b-2 border-b-white">
+                                Project #6
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -261,7 +301,7 @@ const NavBar = () => {
           </div>
         </div>
       )}
-      <div className="pl-6 flex gap-4">
+      <div className="pl-6 flex gap-4 md:hidden">
         <div onClick={handleSearchtoggle}>
           {!enableSearch ? (
             <IoSearchOutline
@@ -279,11 +319,35 @@ const NavBar = () => {
             />
           )}
         </div>
-        <PiShareNetworkLight
-          size={24}
-          color="#756aee"
-          className="cursor-pointer"
-        />
+        <div className="relative">
+          <PiShareNetworkLight
+            size={24}
+            className="cursor-pointer hover:text-[#756aee]"
+            onClick={showShareOptions}
+          />
+
+          <div
+            className="gap-2 bg-white p-1 w-fit absolute -bottom-6 -left-4 hidden"
+            ref={menuRef}
+          >
+            <FaFacebookF
+              size={16}
+              className="hover:text-[#756aee] transition-colors duration-300 ease-linear"
+            />
+            <FaTwitter
+              size={16}
+              className="hover:text-[#756aee] transition-colors duration-300 ease-linear"
+            />
+            <FaGooglePlusG
+              size={16}
+              className="hover:text-[#756aee] transition-colors duration-300 ease-linear"
+            />
+            <FaInstagram
+              size={16}
+              className="hover:text-[#756aee] transition-colors duration-300 ease-linear"
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

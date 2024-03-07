@@ -12,6 +12,9 @@ export default {
         '2': '2 2 0%'
       }
     },
+    screens:{
+      'md': {'max':'990px'}
+    }
   },
   plugins: [
     require('flowbite/plugin'),
