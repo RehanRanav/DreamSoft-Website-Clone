@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+[data-testid="carousel-indicator"]{
+    background-color: #e2e8f0;
+    border-radius: 0px;
+}
+[class="h-3 w-3 rounded-full bg-white dark:bg-gray-800"]{
+    background-color: #756aee;
+}
