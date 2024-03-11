@@ -13,7 +13,8 @@ export default {
       }
     },
     screens:{
-      'md': {'max':'990px'}
+      'md': {'max':'1208px'},
+      'sm': {'max':'612px'}
     }
   },
   plugins: [

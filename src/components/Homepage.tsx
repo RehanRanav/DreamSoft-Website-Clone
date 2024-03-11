@@ -1,9 +1,11 @@
+import Service from "./ServiceComponent/Service"
 import Slider from "./Slider/Slider"
 
 const Homepage = () => {
   return (
     <div>
-      <Slider/>        
+      <Slider/>
+      <Service/>        
     </div>
   )
 }
