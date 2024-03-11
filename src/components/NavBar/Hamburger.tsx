@@ -22,7 +22,7 @@ const Hamburger = () => {
     setMenuopen(false);
   }
   return (
-    <div>
+    <div className="bg-white z-10">
         {
             menuOpen?
             <IoArrowBackSharp size={36} onClick={closeMenu} />:
@@ -30,7 +30,7 @@ const Hamburger = () => {
         }
         
       <div
-        className="max-h-screen w-64 absolute -left-full top-20 flex flex-col justify-start border-r pb-4 overflow-y-scroll transition-all duration-300 ease-in-out"
+        className="max-h-screen bg-white w-64 absolute -left-full top-20 flex flex-col justify-start border-r pb-4 overflow-y-scroll transition-all duration-300 ease-in-out"
         ref={menuRef}
       >
         <div className="relative w-full p-2 pt-4">

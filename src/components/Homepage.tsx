@@ -1,13 +1,9 @@
-// import React from 'react';
-
-import { Outlet } from "react-router-dom"
-import NavBar from "./NavBar"
+import Slider from "./Slider/Slider"
 
 const Homepage = () => {
   return (
     <div>
-        <NavBar/>
-        <Outlet/>
+      <Slider/>        
     </div>
   )
 }
