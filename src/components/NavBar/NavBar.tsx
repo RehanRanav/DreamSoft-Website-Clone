@@ -25,7 +25,7 @@ const NavBar = () => {
   };
 
   const HoverlineEffect = () => (
-    <div className="w-full h-1 bg-[#756aee] opacity-0 group-hover:opacity-100 group-hover:transform group-hover:-translate-y-[2px] transition-opacity duration-500 ease-in-out"></div>
+    <div className="w-full h-1 bg-primary opacity-0 group-hover:opacity-100 group-hover:transform group-hover:-translate-y-[2px] transition-opacity duration-500 ease-in-out"></div>
   );
 
   const showShareOptions = () => {
@@ -61,7 +61,7 @@ const NavBar = () => {
             <Card className="z-10 rounded-none font-semibold text-base w-64 px-4 mt-2 absolute left-0 whitespace-break-spaces hidden group-hover:block hover:block group-hover:transform group-hover:top-14 transition-all duration-300 ease-in bg-white">
               <ul className="flex flex-col gap-3">
                 {Gallery.map((item,index) => (
-                  <li className="hover:border-l-4 hover:border-[#756aee] hover:pl-4 transition-all duration-300 ease-in-out" key={index}>
+                  <li className="hover:border-l-4 hover:border-primary hover:pl-4 transition-all duration-300 ease-in-out" key={index}>
                     {item}
                   </li>
                 ))}
@@ -79,7 +79,7 @@ const NavBar = () => {
             <Card className="z-10 rounded-none font-semibold text-base w-60 px-4 mt-2 absolute left-0 whitespace-break-spaces hidden group-hover:block hover:block group-hover:transform group-hover:top-14 transition-all duration-300 ease-in bg-white">
               <ul className="flex flex-col gap-3">
                 {Blog.map((item,index) => (
-                  <li className="hover:border-l-4 hover:border-[#756aee] hover:pl-4 transition-all duration-300 ease-in-out" key={index}>
+                  <li className="hover:border-l-4 hover:border-primary hover:pl-4 transition-all duration-300 ease-in-out" key={index}>
                     {item}
                   </li>
                 ))}
@@ -100,7 +100,7 @@ const NavBar = () => {
                   <div>Elements</div>
                   <ul className="grid grid-cols-2 grid-rows-5">
                     {Elements.map((item,index) => (
-                      <li className="hover:border-l-4 hover:border-[#756aee] hover:pl-4 transition-all duration-300 ease-in-out" key={index}>
+                      <li className="hover:border-l-4 hover:border-primary hover:pl-4 transition-all duration-300 ease-in-out" key={index}>
                         {item}
                       </li>
                     ))}
@@ -111,7 +111,7 @@ const NavBar = () => {
                   <div>Additional Pages</div>
                   <ul className="grid grid-cols-2 grid-rows-6">
                     {AdditionalPages.map((item,index) => (
-                      <li className="hover:border-l-4 hover:border-[#756aee] hover:pl-4 transition-all duration-300 ease-in-out whitespace-normal" key={index}>
+                      <li className="hover:border-l-4 hover:border-primary hover:pl-4 transition-all duration-300 ease-in-out whitespace-normal" key={index}>
                         {item}
                       </li>
                     ))}
@@ -134,14 +134,14 @@ const NavBar = () => {
             type="text"
             className={`block w-full transition-all duration-1000 ease-linear ${
               enableSearch ? `scale-x-100` : ``
-            } z-10 p-4 ps-10 text-sm text-gray-900 border-none shadow-md border-gray-300 rounded-full bg-gray-50 outline-none focus:border-none`}
+            } z-10 p-4 ps-10 text-sm text-black border-none shadow-md border-gray-300 rounded-full bg-gray-50 outline-none focus:border-none`}
             placeholder="Search..."
           />
           <div className="absolute inset-y-0 end-3 flex items-center">
             <button onClick={handleSearchtoggle} className="z-50">
               <IoSearchOutline
                 size={24}
-                className="hover:text-[#756aee] cursor-pointer"
+                className="hover:text-primary cursor-pointer"
               />
             </button>
           </div>
@@ -152,14 +152,14 @@ const NavBar = () => {
           {!enableSearch ? (
             <IoSearchOutline
               size={24}
-              className={`hover:text-[#756aee] cursor-pointer transform rotate-0 transition-transform duration-1000 ease-in-out ${
+              className={`hover:text-primary cursor-pointer transform rotate-0 transition-transform duration-1000 ease-in-out ${
                 enableSearch ? `rotate-90` : `rotate-0`
               }`}
             />
           ) : (
             <MdOutlineCancel
               size={24}
-              className={`hover:text-[#756aee] cursor-pointer transform rotate-0 transition-transform duration-1000 ease-in-out ${
+              className={`hover:text-primary cursor-pointer transform rotate-0 transition-transform duration-1000 ease-in-out ${
                 !enableSearch ? `rotate-90` : `rotate-0`
               }`}
             />
@@ -168,7 +168,7 @@ const NavBar = () => {
         <div className="relative">
           <PiShareNetworkLight
             size={24}
-            className="cursor-pointer hover:text-[#756aee]"
+            className="cursor-pointer hover:text-primary"
             onClick={showShareOptions}
           />
 
@@ -179,19 +179,19 @@ const NavBar = () => {
           >
             <FaFacebookF
               size={16}
-              className="hover:text-[#756aee] transition-colors duration-300 ease-linear"
+              className="hover:text-primary transition-colors duration-300 ease-linear"
             />
             <FaTwitter
               size={16}
-              className="hover:text-[#756aee] transition-colors duration-300 ease-linear"
+              className="hover:text-primary transition-colors duration-300 ease-linear"
             />
             <FaGooglePlusG
               size={16}
-              className="hover:text-[#756aee] transition-colors duration-300 ease-linear"
+              className="hover:text-primary transition-colors duration-300 ease-linear"
             />
             <FaInstagram
               size={16}
-              className="hover:text-[#756aee] transition-colors duration-300 ease-linear"
+              className="hover:text-primary transition-colors duration-300 ease-linear"
             />
           </div>
         </div>

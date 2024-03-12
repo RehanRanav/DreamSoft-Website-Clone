@@ -14,7 +14,13 @@ export default {
     },
     screens:{
       'md': {'max':'1208px'},
-      'sm': {'max':'612px'}
+      'sm': {'max':'612px'},
+      'lg': {"min":"1208px"}
+    },
+    colors:{
+      'primary': '#756aee',
+      'secondary': '#ffffff',
+      'neutral': "#a3a3a3"
     }
   },
   plugins: [

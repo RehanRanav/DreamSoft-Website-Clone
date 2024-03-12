@@ -45,7 +45,7 @@ const Slider = () => {
               <div className="text-7xl w-full text-center">{slider[1]}</div>
               <div className="text-center w-1/2">{slider[2]}</div>
 
-              <button className="relative h-14 w-48 bg-[#756aee] text-white font-semibold overflow-hidden transition-all duration-1000 ease-linear before:absolute before:bg-black before:content-[''] before:top-0 before:left-1/2 before:transform before:-translate-x-1/2 before:z-10 before:transition-all before:duration-500 before:w-0 before:h-full before:hover:w-full">
+              <button className="relative h-14 w-48 bg-primary text-white font-semibold overflow-hidden transition-all duration-1000 ease-linear before:absolute before:bg-black before:content-[''] before:top-0 before:left-1/2 before:transform before:-translate-x-1/2 before:z-10 before:transition-all before:duration-500 before:w-0 before:h-full before:hover:w-full">
                 <span className="z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                   {" "}
                   Get In Touch

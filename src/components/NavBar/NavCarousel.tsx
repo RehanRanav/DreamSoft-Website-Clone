@@ -29,7 +29,7 @@ const NavCarousel = () => {
               width: "142px",
             }}
           >
-            <div className="absolute inset-0 bg-gray-500 opacity-0 hover:opacity-50 hover:scale-105 transition-all duration-300 ease-in-out">
+            <div className="absolute inset-0 bg-neutral opacity-0 hover:opacity-50 hover:scale-105 transition-all duration-300 ease-in-out">
               <div className="m-2 ml-3 border h-[124px] border-white flex flex-col gap-2 justify-center items-center text-white">
                 <AiOutlineZoomIn size={30} />
                 <div className="hover:border-b-2 border-b-white">
@@ -46,7 +46,7 @@ const NavCarousel = () => {
               width: "142px",
             }}
           >
-            <div className="absolute inset-0 bg-gray-500 opacity-0 hover:opacity-50 hover:scale-105 transition-all duration-300 ease-in-out">
+            <div className="absolute inset-0 bg-neutral opacity-0 hover:opacity-50 hover:scale-105 transition-all duration-300 ease-in-out">
               <div className="m-2 ml-3 border h-[124px] border-white flex flex-col gap-2 justify-center items-center text-white">
                 <AiOutlineZoomIn size={30} />
                 <div className="hover:border-b-2 border-b-white">

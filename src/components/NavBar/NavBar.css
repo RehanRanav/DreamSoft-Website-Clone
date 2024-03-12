@@ -8,7 +8,7 @@
 }
 
 .NavCarousal  [data-testid="carousel-indicator"] {
-  background-color: #e2e8f0;
+  background-color: #a3a3a3;
   border-radius: 0px ;
 }
 .NavCarousal [class="h-3 w-3 rounded-full bg-white dark:bg-gray-800"] {
