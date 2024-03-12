@@ -1,20 +1,20 @@
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { Card, Carousel } from "flowbite-react";
-import logo from "../../assets/logo-dreamsoft.png";
-import NavbarImg1 from "../../assets/navbar-img-1.jpg";
-import NavbarImg2 from "../../assets/navbar-img-2.jpg";
-import NavbarImg3 from "../../assets/navbar-img-3.jpg";
-import NavbarImg4 from "../../assets/navbar-img-4.jpg";
-import NavbarImg5 from "../../assets/navbar-img-5.jpg";
-import NavbarImg6 from "../../assets/navbar-img-6.jpg";
+import { Card } from "flowbite-react";
+import logo from "../../assets/NavImages/logo-dreamsoft.png";
 import { IoSearchOutline } from "react-icons/io5";
 import { PiShareNetworkLight } from "react-icons/pi";
 import { MdOutlineCancel } from "react-icons/md";
-import { AiOutlineZoomIn } from "react-icons/ai";
-import { FaFacebookF, FaTwitter, FaGooglePlusG, FaInstagram  } from "react-icons/fa6";
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaGooglePlusG,
+  FaInstagram,
+} from "react-icons/fa6";
 import Hamburger from "./Hamburger";
 import "./NavBar.css";
+import NavCarousel from "./NavCarousel";
+import { AdditionalPages, Blog, Elements, Gallery } from "./NavLists";
 
 const NavBar = () => {
   const [enableSearch, setEnableSearch] = useState(false);
@@ -60,13 +60,8 @@ const NavBar = () => {
             <div>Gallery</div> <HoverlineEffect />
             <Card className="z-10 rounded-none font-semibold text-base w-64 px-4 mt-2 absolute left-0 whitespace-break-spaces hidden group-hover:block hover:block group-hover:transform group-hover:top-14 transition-all duration-300 ease-in bg-white">
               <ul className="flex flex-col gap-3">
-                {[
-                  ["Full width Gallery"],
-                  ["Grid Gallery"],
-                  ["Full width Masonry Gallery"],
-                  ["Masonry Gallery"],
-                ].map((item) => (
-                  <li className="hover:border-l-4 hover:border-[#756aee] hover:pl-4 transition-all duration-300 ease-in-out">
+                {Gallery.map((item,index) => (
+                  <li className="hover:border-l-4 hover:border-[#756aee] hover:pl-4 transition-all duration-300 ease-in-out" key={index}>
                     {item}
                   </li>
                 ))}
@@ -81,16 +76,10 @@ const NavBar = () => {
             className="group relative h-16 flex flex-col justify-center items-center"
           >
             <div>Blog</div> <HoverlineEffect />
-            <Card className="z-10 rounded-none font-semibold text-base w-60 px-4 mt-2 absolute left-0 whitespace-nowrap hidden group-hover:block hover:block group-hover:transform group-hover:top-14 transition-all duration-300 ease-in bg-white">
+            <Card className="z-10 rounded-none font-semibold text-base w-60 px-4 mt-2 absolute left-0 whitespace-break-spaces hidden group-hover:block hover:block group-hover:transform group-hover:top-14 transition-all duration-300 ease-in bg-white">
               <ul className="flex flex-col gap-3">
-                {[
-                  ["Classic Blog"],
-                  ["Grid Blog"],
-                  ["Grid Blog 2"],
-                  ["Grid Blog 3"],
-                  ["Blog Post"],
-                ].map(([item]) => (
-                  <li className="hover:border-l-4 hover:border-[#756aee] hover:pl-4 transition-all duration-300 ease-in-out">
+                {Blog.map((item,index) => (
+                  <li className="hover:border-l-4 hover:border-[#756aee] hover:pl-4 transition-all duration-300 ease-in-out" key={index}>
                     {item}
                   </li>
                 ))}
@@ -105,24 +94,13 @@ const NavBar = () => {
             className="group relative h-16 flex flex-col justify-center items-center"
           >
             <div>Pages</div> <HoverlineEffect />
-            <Card className="z-10 rounded-none font-semibold text-base w-screen px-4 mt-2 absolute -right-[158px] whitespace-nowrap hidden group-hover:block hover:block group-hover:transform group-hover:top-14 transition-display transition-all duration-1000 ease-in bg-white">
+            <Card className="z-10 rounded-none font-semibold text-base w-screen px-4 mt-2 absolute -right-[158px] whitespace-nowrap hidden group-hover:block hover:block group-hover:transform group-hover:top-14 transition-all duration-1000 ease-in bg-white">
               <div className="grid grid-cols-3 gap-4">
                 <div className="border-r-2 font-normal">
                   <div>Elements</div>
                   <ul className="grid grid-cols-2 grid-rows-5">
-                    {[
-                      ["Typography"],
-                      ["Calls to Action"],
-                      ["Icons with Text"],
-                      ["Progress Bars"],
-                      ["Buttons"],
-                      ["Tabs and Accordions"],
-                      ["Forms"],
-                      ["Hover Effects"],
-                      [""],
-                      ["Grid System"],
-                    ].map(([item]) => (
-                      <li className="hover:border-l-4 hover:border-[#756aee] hover:pl-4 transition-all duration-300 ease-in-out whitespace-normal">
+                    {Elements.map((item,index) => (
+                      <li className="hover:border-l-4 hover:border-[#756aee] hover:pl-4 transition-all duration-300 ease-in-out" key={index}>
                         {item}
                       </li>
                     ))}
@@ -132,21 +110,8 @@ const NavBar = () => {
                 <div className="border-r-2 font-normal">
                   <div>Additional Pages</div>
                   <ul className="grid grid-cols-2 grid-rows-6">
-                    {[
-                      ["Service"],
-                      ["503 Page"],
-                      ["Service 2"],
-                      ["Pricing"],
-                      ["Single Service"],
-                      ["Coming Soon"],
-                      ["Our Team"],
-                      ["Contact Us 2"],
-                      ["Testimonials"],
-                      ["FAQ"],
-                      ["404 Page"],
-                      ["Search Results"],
-                    ].map(([item]) => (
-                      <li className="hover:border-l-4 hover:border-[#756aee] hover:pl-4 transition-all duration-300 ease-in-out whitespace-normal">
+                    {AdditionalPages.map((item,index) => (
+                      <li className="hover:border-l-4 hover:border-[#756aee] hover:pl-4 transition-all duration-300 ease-in-out whitespace-normal" key={index}>
                         {item}
                       </li>
                     ))}
@@ -156,55 +121,7 @@ const NavBar = () => {
                 <div>
                   <div>Recent Projects</div>
                   <div className="px-4 h-56 w-96 cursor-pointer">
-                    <Carousel
-                      leftControl={` `}
-                      rightControl={` `}
-                      indicators={true}
-                      className="NavCarousal"
-                    >
-                      {[
-                        [NavbarImg1, NavbarImg2],
-                        [NavbarImg3, NavbarImg4],
-                        [NavbarImg5, NavbarImg6],
-                      ].map((slide, index) => (
-                        <div className="grid grid-cols-2 gap-2">
-                          <div
-                            className={`h-fit w-fit bg-no-repeat bg-cover bg-center transition duration-300 ease-in-out relative cursor-pointer`}
-                            style={{
-                              backgroundImage: `url(${slide[0]})`,
-                              height: "140px",
-                              width: "142px",
-                            }}
-                          >
-                            <div className="absolute inset-0 bg-gray-500 opacity-0 hover:opacity-50 hover:scale-105 transition-all duration-300 ease-in-out">
-                              <div className="m-2 ml-3 border h-[124px] border-white flex flex-col gap-2 justify-center items-center text-white">
-                                <AiOutlineZoomIn size={30} />
-                                <div className="hover:border-b-2 border-b-white">
-                                  Project #{index * 2 + 1}
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                            className={`h-fit w-fit bg-no-repeat bg-cover bg-center transition duration-300 ease-in-out relative cursor-pointer`}
-                            style={{
-                              backgroundImage: `url(${slide[1]})`,
-                              height: "140px",
-                              width: "142px",
-                            }}
-                          >
-                            <div className="absolute inset-0 bg-gray-500 opacity-0 hover:opacity-50 hover:scale-105 transition-all duration-300 ease-in-out">
-                              <div className="m-2 ml-3 border h-[124px] border-white flex flex-col gap-2 justify-center items-center text-white">
-                                <AiOutlineZoomIn size={30} />
-                                <div className="hover:border-b-2 border-b-white">
-                                  Project #{index * 2 + 2}
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
-                    </Carousel>
+                    <NavCarousel />
                   </div>
                 </div>
               </div>
@@ -258,7 +175,7 @@ const NavBar = () => {
           <div
             className="gap-2 bg-white p-1 w-fit absolute -bottom-6 -left-4"
             ref={menuRef}
-            style={{display: "none"}}
+            style={{ display: "none" }}
           >
             <FaFacebookF
               size={16}
