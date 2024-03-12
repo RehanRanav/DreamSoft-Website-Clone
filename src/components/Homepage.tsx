@@ -1,3 +1,4 @@
+import Experience from "./ExperienceComponent/Experience"
 import Projects from "./ProjectsComponent/Projects"
 import Service from "./ServiceComponent/Service"
 import Slider from "./Slider/Slider"
@@ -7,7 +8,8 @@ const Homepage = () => {
     <div>
       <Slider/>
       <Service/> 
-      <Projects/>       
+      <Projects/>
+      <Experience/>       
     </div>
   )
 }

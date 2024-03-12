@@ -1,12 +1,12 @@
 import ProjectsCard from "./ProjectsCard";
-import Project1 from "../../assets/ProjectsImages/Project1.jpg";
-import Project2 from "../../assets/ProjectsImages/Project2.jpg";
-import Project3 from "../../assets/ProjectsImages/Project3.jpg";
-import Project4 from "../../assets/ProjectsImages/Project4.jpg";
-import Project5 from "../../assets/ProjectsImages/Project5.jpg";
-import Project6 from "../../assets/ProjectsImages/Project6.jpg";
-import Project7 from "../../assets/ProjectsImages/Project7.jpg";
-import Project8 from "../../assets/ProjectsImages/Project8.jpg";
+import FinStep from "../../assets/ProjectsImages/Project1.jpg";
+import MobileFinance from "../../assets/ProjectsImages/Project2.jpg";
+import QManage from "../../assets/ProjectsImages/Project3.jpg";
+import WearherCast from "../../assets/ProjectsImages/Project4.jpg";
+import HomeCalender from "../../assets/ProjectsImages/Project5.jpg";
+import MPlanner from "../../assets/ProjectsImages/Project6.jpg";
+import AliceMessenger from "../../assets/ProjectsImages/Project7.jpg";
+import WiseMoney from "../../assets/ProjectsImages/Project8.jpg";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { useRef } from "react";
 
@@ -29,14 +29,14 @@ const Projects = () => {
   ];
 
   const ProjectCards = [
-    [Project1, "FinStep"],
-    [Project2, "Mobile Finance"],
-    [Project3, "Q-Manage"],
-    [Project4, "WearherCast"],
-    [Project5, "Home Calender"],
-    [Project6, "MPlanner"],
-    [Project7, "Alice Messenger"],
-    [Project8, "WiseMoney"],
+    [FinStep, "FinStep"],
+    [MobileFinance, "Mobile Finance"],
+    [QManage, "Q-Manage"],
+    [WearherCast, "WearherCast"],
+    [HomeCalender, "Home Calender"],
+    [MPlanner, "MPlanner"],
+    [AliceMessenger, "Alice Messenger"],
+    [WiseMoney, "WiseMoney"],
   ];
 
   return (
