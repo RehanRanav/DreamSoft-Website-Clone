@@ -29,8 +29,8 @@ const Experience = () => {
           </div>
         </div>
 
-        <div className="h-fit grid grid-cols-2 grid-rows-2 m-4">
-          <div className="flex pr-8 pb-8 flex-col gap-2 justify-center items-center border-r border-b">
+        <div className="h-fit grid grid-cols-2 grid-rows-2 sm:grid-cols-1 sm:grid-rows-4 m-4 justify-center items-center">
+          <div className="flex pr-8 pb-8 sm:p-0 sm:pb-8 flex-col gap-2 justify-center items-center border-r sm:border-r-0 border-b">
             <div>
               <span className="text-8xl">2</span>
               <span className="text-6xl">K</span>
@@ -38,21 +38,21 @@ const Experience = () => {
             <div className="text-neutral tracking-widest">APPS DEVELOPED</div>
           </div>
 
-          <div className="flex pl-8 pb-8 flex-col gap-2 justify-center items-center border-b">
+          <div className="flex pl-8 pb-8 sm:p-0 sm:pb-8 flex-col gap-2 justify-center items-center border-b">
             <div>
               <span className="text-8xl">40</span>
             </div>
             <div className="text-neutral tracking-widest">CONSULTANTS</div>
           </div>
 
-          <div className="flex pr-8 pt-8 flex-col gap-2 justify-center items-center border-r">
+          <div className="flex pr-8 pt-8 sm:p-0 sm:pb-8 flex-col gap-2 justify-center items-center border-r sm:border-r-0 sm:border-b">
             <div>
               <span className="text-8xl">12</span>
             </div>
             <div className="text-neutral tracking-widest">AWARDS WON</div>
           </div>
 
-          <div className="flex pl-8 pt-8 flex-col gap-2 justify-center items-center">
+          <div className="flex pl-8 pt-8 sm:p-0 sm:pb-8 flex-col gap-2 justify-center items-center">
             <div>
               <span className="text-8xl">160</span>
             </div>

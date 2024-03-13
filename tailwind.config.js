@@ -20,7 +20,8 @@ export default {
     colors:{
       'primary': '#756aee',
       'secondary': '#ffffff',
-      'neutral': "#a3a3a3"
+      'neutral': "#a3a3a3",
+      'neutral-transparent': "#11111180"
     }
   },
   plugins: [

@@ -10,3 +10,7 @@ export interface ProjectsCardProps {
   ProjectImg: string;
   title: string;
 }
+export interface TabComponentProps {
+  title: string;
+  description: string;
+}
