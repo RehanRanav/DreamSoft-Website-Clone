@@ -1,4 +1,7 @@
+import Blogs from "./BlogComponent/Blogs"
 import Experience from "./ExperienceComponent/Experience"
+import Review from "./FeedbackComponent/Review"
+import Footer from "./Footer/Footer"
 import Projects from "./ProjectsComponent/Projects"
 import Service from "./ServiceComponent/Service"
 import Slider from "./Slider/Slider"
@@ -11,7 +14,10 @@ const Homepage = () => {
       <Service/> 
       <Projects/>
       <Experience/> 
-      <Team/>      
+      <Team/>
+      <Review/>
+      <Blogs/>    
+      <Footer/>  
     </div>
   )
 }

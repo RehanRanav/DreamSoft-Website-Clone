@@ -21,7 +21,9 @@ export default {
       'primary': '#756aee',
       'secondary': '#ffffff',
       'neutral': "#a3a3a3",
-      'neutral-transparent': "#11111180"
+      'neutral-transparent': "#11111180",
+      'footer-bg': '#1b1929',
+      'footer-icon': '#333144'
     }
   },
   plugins: [

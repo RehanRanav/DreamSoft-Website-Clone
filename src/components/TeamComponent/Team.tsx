@@ -1,4 +1,3 @@
-import React from "react";
 import RyanImg from "../../assets/TeamImages/directorofproduction.jpg";
 import JillImg from "../../assets/TeamImages/uidesigner.jpg";
 import SamImg from "../../assets/TeamImages/seniordeveloper.jpg";
