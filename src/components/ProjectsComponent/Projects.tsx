@@ -9,6 +9,7 @@ import AliceMessenger from "../../assets/ProjectsImages/Project7.jpg";
 import WiseMoney from "../../assets/ProjectsImages/Project8.jpg";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { useRef } from "react";
+import { motion } from "framer-motion";
 
 const Projects = () => {
   const menuRef = useRef<HTMLUListElement | null>(null);
@@ -43,12 +44,21 @@ const Projects = () => {
     <div className="py-20 px-10 flex flex-col gap-4 justify-center items-center">
       <div className="flex flex-col gap-10 justify-center items-center">
         <div className="font-semibold text-4xl">Latest Projects</div>
-        <div className="w-2/5 md:w-2/3 sm:w-full  text-center font-normal">
+        <motion.div
+          initial={{ x: 50, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{
+            duration: 0.5,
+            ease: "easeIn",
+          }}
+          viewport={{ once: true }}
+          className="w-2/5 md:w-2/3 sm:w-full  text-center font-normal"
+        >
           In our portfolio, you can browse the latest products developed for our
           clients for different corporate purposes. Our qualified team of
           interface designers and software developers is always ready to create
           something unique for you.
-        </div>
+        </motion.div>
       </div>
       <div className="w-full flex flex-col gap-10">
         <div className="relative w-full flex md:flex-col justify-center items-center">
@@ -80,7 +90,11 @@ const Projects = () => {
         </div>
         <div className="grid grid-cols-3 grid-rows-3 md:grid-cols-1 items-center justify-center gap-x-4 gap-y-10">
           {ProjectCards.map((item, index) => (
-            <ProjectsCard ProjectImg={item.image} title={item.title} key={index} />
+            <ProjectsCard
+              ProjectImg={item.image}
+              title={item.title}
+              key={index}
+            />
           ))}
         </div>
       </div>

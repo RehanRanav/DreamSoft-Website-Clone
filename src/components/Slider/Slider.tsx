@@ -98,7 +98,7 @@ const Slider = () => {
   };
 
   return (
-    <div className="mt-20 w-screen overflow-hidden" ref={scrollRef}>
+    <div className="mt-20" ref={scrollRef}>
       <Carousel
         theme={customTheme}
         leftControl={` `}
