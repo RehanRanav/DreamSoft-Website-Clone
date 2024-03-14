@@ -23,26 +23,30 @@ const TabComponent: FC<TabComponentProps> = ({ title, description }) => {
 
 const GetMoreComponent = () => {
   const TabData = [
-    [
-      "01",
-      "FREE APPS",
-      "We regularly upload new free apps to our website, which is fully accessible to our clients and subscribers. You can also find out about free apps in our blog.",
-    ],
-    [
-      "02",
-      "GET SOCIAL",
-      "Every app we develop has built-in social support that allows you to stay connected to your accounts on Facebook, Instagram, Twitter and other networks.",
-    ],
-    [
-      "03",
-      "CUSTOMER SERVICE",
-      "Every customer of DreamSoft can get access to our friendly and qualified 24/7 support via chat or phone. Feel free to ask us any questions!",
-    ],
-    [
-      "04",
-      "GREAT USABILITY",
-      "All our apps are designed to have great usability in order to easily operate our applications. That is why our software has high ratings and lots of awards.",
-    ],
+    {
+      tab: "01",
+      title: "FREE APPS",
+      description:
+        "We regularly upload new free apps to our website, which is fully accessible to our clients and subscribers. You can also find out about free apps in our blog.",
+    },
+    {
+      tab: "02",
+      title: "GET SOCIAL",
+      description:
+        "Every app we develop has built-in social support that allows you to stay connected to your accounts on Facebook, Instagram, Twitter and other networks.",
+    },
+    {
+      tab: "03",
+      title: "CUSTOMER SERVICE",
+      description:
+        "Every customer of DreamSoft can get access to our friendly and qualified 24/7 support via chat or phone. Feel free to ask us any questions!",
+    },
+    {
+      tab: "04",
+      title: "GREAT USABILITY",
+      description:
+        "All our apps are designed to have great usability in order to easily operate our applications. That is why our software has high ratings and lots of awards.",
+    },
   ];
 
   const customTheme: CustomFlowbiteTheme["tabs"] = {
@@ -72,17 +76,17 @@ const GetMoreComponent = () => {
           <Tabs
             aria-label="Tabs with underline"
             style="underline"
-            className="flex justify-between px-10 sm:px-0 sm:text-center"
+            className="flex justify-between md:px-10 sm:px-0 sm:text-center"
             theme={customTheme}
           >
             {TabData.map((item, index) => (
               <Tabs.Item
                 active
-                title={item[0]}
+                title={item.tab}
                 className="text-4xl"
                 key={index}
               >
-                <TabComponent title={item[1]} description={item[2]} />
+                <TabComponent title={item.title} description={item.description} />
               </Tabs.Item>
             ))}
           </Tabs>

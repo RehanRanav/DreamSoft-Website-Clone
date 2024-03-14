@@ -9,12 +9,12 @@ const RightFooter = () => {
     ["UX & UI"],
   ];
   return (
-    <div className="">
-      <div className="text-4xl border-b p-2 whitespace-nowrap text-neutral font-medium">
+    <div className="cursor-pointer">
+      <div className="text-4xl border-b py-4 whitespace-nowrap text-neutral font-medium">
         What We Offer
       </div>
       {OfferedServices.map((item, index) => (
-        <div className="text-2xl text-white py-4 border-b flex justify-between" key={index}>
+        <div className="text-2xl text-white py-4 border-b flex justify-between hover:text-primary" key={index}>
           <div className="lg:w-36">{item}</div>
           <IoMdArrowDropleft className="text-neutral"/>
         </div>

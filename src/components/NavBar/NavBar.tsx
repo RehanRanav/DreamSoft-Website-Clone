@@ -59,13 +59,16 @@ const NavBar = () => {
           >
             <div>Gallery</div> <HoverlineEffect />
             <Card className="z-10 rounded-none font-semibold text-base w-64 px-4 mt-2 absolute left-0 whitespace-break-spaces hidden group-hover:block hover:block group-hover:transform group-hover:top-14 transition-all duration-300 ease-in bg-white">
-              <ul className="flex flex-col gap-3">
-                {Gallery.map((item,index) => (
-                  <li className="hover:border-l-4 hover:border-primary hover:pl-4 transition-all duration-300 ease-in-out" key={index}>
-                    {item}
-                  </li>
-                ))}
-              </ul>
+                <ul className="flex flex-col gap-3">
+                  {Gallery.map((item, index) => (
+                    <li
+                      className="hover:border-l-4 hover:border-primary hover:pl-4 transition-all duration-300 ease-in-out"
+                      key={index}
+                    >
+                      {item}
+                    </li>
+                  ))}
+                </ul>
             </Card>
           </Link>
           <Link to="/" className="group">
@@ -78,8 +81,11 @@ const NavBar = () => {
             <div>Blog</div> <HoverlineEffect />
             <Card className="z-10 rounded-none font-semibold text-base w-60 px-4 mt-2 absolute left-0 whitespace-break-spaces hidden group-hover:block hover:block group-hover:transform group-hover:top-14 transition-all duration-300 ease-in bg-white">
               <ul className="flex flex-col gap-3">
-                {Blog.map((item,index) => (
-                  <li className="hover:border-l-4 hover:border-primary hover:pl-4 transition-all duration-300 ease-in-out" key={index}>
+                {Blog.map((item, index) => (
+                  <li
+                    className="hover:border-l-4 hover:border-primary hover:pl-4 transition-all duration-300 ease-in-out"
+                    key={index}
+                  >
                     {item}
                   </li>
                 ))}
@@ -94,13 +100,16 @@ const NavBar = () => {
             className="group relative h-16 flex flex-col justify-center items-center"
           >
             <div>Pages</div> <HoverlineEffect />
-            <Card className="z-10 rounded-none font-semibold text-base w-screen px-4 mt-2 absolute -right-[158px] whitespace-nowrap hidden group-hover:block hover:block group-hover:transform group-hover:top-14 transition-all duration-1000 ease-in bg-white">
+            <Card className="z-10 rounded-none font-semibold text-base w-screen px-4 pb-5 mt-2 absolute -right-[158px] whitespace-nowrap hidden group-hover:block hover:block group-hover:transform group-hover:top-14 transition-all duration-1000 ease-in bg-white">
               <div className="grid grid-cols-3 gap-4">
                 <div className="border-r-2 font-normal">
-                  <div>Elements</div>
-                  <ul className="grid grid-cols-2 grid-rows-5">
-                    {Elements.map((item,index) => (
-                      <li className="hover:border-l-4 hover:border-primary hover:pl-4 transition-all duration-300 ease-in-out" key={index}>
+                  <div className="text-lg pb-4">Elements</div>
+                  <ul className="grid grid-cols-2 grid-rows-5 gap-4 ">
+                    {Elements.map((item, index) => (
+                      <li
+                        className="hover:border-l-4 hover:border-primary hover:pl-4 transition-all duration-300 ease-in-out"
+                        key={index}
+                      >
                         {item}
                       </li>
                     ))}
@@ -108,10 +117,13 @@ const NavBar = () => {
                 </div>
 
                 <div className="border-r-2 font-normal">
-                  <div>Additional Pages</div>
-                  <ul className="grid grid-cols-2 grid-rows-6">
-                    {AdditionalPages.map((item,index) => (
-                      <li className="hover:border-l-4 hover:border-primary hover:pl-4 transition-all duration-300 ease-in-out whitespace-normal" key={index}>
+                  <div className="text-lg pb-4">Additional Pages</div>
+                  <ul className="grid grid-cols-2 grid-rows-6 gap-4">
+                    {AdditionalPages.map((item, index) => (
+                      <li
+                        className="hover:border-l-4 hover:border-primary hover:pl-4 transition-all duration-300 ease-in-out whitespace-normal"
+                        key={index}
+                      >
                         {item}
                       </li>
                     ))}

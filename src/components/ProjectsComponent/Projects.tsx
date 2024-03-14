@@ -29,14 +29,14 @@ const Projects = () => {
   ];
 
   const ProjectCards = [
-    [FinStep, "FinStep"],
-    [MobileFinance, "Mobile Finance"],
-    [QManage, "Q-Manage"],
-    [WearherCast, "WearherCast"],
-    [HomeCalender, "Home Calender"],
-    [MPlanner, "MPlanner"],
-    [AliceMessenger, "Alice Messenger"],
-    [WiseMoney, "WiseMoney"],
+    { image: FinStep, title: "FinStep" },
+    { image: MobileFinance, title: "Mobile Finance" },
+    { image: QManage, title: "Q-Manage" },
+    { image: WearherCast, title: "WearherCast" },
+    { image: HomeCalender, title: "Home Calender" },
+    { image: MPlanner, title: "MPlanner" },
+    { image: AliceMessenger, title: "Alice Messenger" },
+    { image: WiseMoney, title: "WiseMoney" },
   ];
 
   return (
@@ -80,7 +80,7 @@ const Projects = () => {
         </div>
         <div className="grid grid-cols-3 grid-rows-3 md:grid-cols-1 items-center justify-center gap-x-4 gap-y-10">
           {ProjectCards.map((item, index) => (
-            <ProjectsCard ProjectImg={item[0]} title={item[1]} key={index} />
+            <ProjectsCard ProjectImg={item.image} title={item.title} key={index} />
           ))}
         </div>
       </div>

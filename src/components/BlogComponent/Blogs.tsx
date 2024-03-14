@@ -5,24 +5,27 @@ import HibernateBlogImg from "../../assets/BlogImages/hqlImg.jpg";
 
 const Blogs = () => {
   const BlogData = [
-    [
-      "07/04",
-      AsyncawaitBlogImg,
-      "Benefits Of Async/Await",
-      "Asynchronous functions are a good and bad thing in JavaScript. The good side is that asynchronous functions are non-blocking and",
-    ],
-    [
-      "07/17",
-      IPaasBlogImg,
-      "Key Considerations Of IPaaS",
-      "Digital transformation requires cloud appropriate adoption, legacy IT systems modernization, and Agile-based methodologies for faster",
-    ],
-    [
-      "07/22",
-      HibernateBlogImg,
-      "Hibernate Query Language",
-      "In this tutorial, we will discuss the Hibernate Query Language. HQL is an object-oriented query language. Hibernate Query",
-    ],
+    {
+      date: "07/04",
+      image: AsyncawaitBlogImg,
+      title: "Benefits Of Async/Await",
+      description:
+        "Asynchronous functions are a good and bad thing in JavaScript. The good side is that asynchronous functions are non-blocking and",
+    },
+    {
+      date: "07/17",
+      image: IPaasBlogImg,
+      title: "Key Considerations Of IPaaS",
+      description:
+        "Digital transformation requires cloud appropriate adoption, legacy IT systems modernization, and Agile-based methodologies for faster",
+    },
+    {
+      date: "07/22",
+      image: HibernateBlogImg,
+      title: "Hibernate Query Language",
+      description:
+        "In this tutorial, we will discuss the Hibernate Query Language. HQL is an object-oriented query language. Hibernate Query",
+    },
   ];
 
   const customTheme: CustomFlowbiteTheme["card"] = {
@@ -42,19 +45,19 @@ const Blogs = () => {
           <Card
             className="max-w-smrounded-none shadow-none border-none overflow-hidden"
             imgAlt="Benefits Of Async/Await"
-            imgSrc={item[1]}
+            imgSrc={item.image}
             theme={customTheme}
             key={index}
           >
             <div className="absolute text-primary text-4xl after:relative -top-10 sm:-top-8 z-10 px-4 pb-2 bg-secondary">
               <div className="absolute bg-secondary h-4 w-full skew-x-[30deg] -top-4 -left-[5px]"></div>
-              {item[0]}
+              {item.date}
             </div>
             <div className="text-xl font-medium tracking-wide text-black hover:text-primary dark:text-white">
-              {item[2]}
+              {item.title}
             </div>
             <p className="font-medium text-neutral text-justify w-68 max-h-20 overflow-hidden text-ellipsis">
-             {item[3]}
+              {item.description}
             </p>
           </Card>
         ))}

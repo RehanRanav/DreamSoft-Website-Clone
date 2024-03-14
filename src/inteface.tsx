@@ -14,3 +14,9 @@ export interface TabComponentProps {
   title: string;
   description: string;
 }
+
+export interface SlideWithAnimationProps {
+  image: string;
+  title: string;
+  description: string;
+}
