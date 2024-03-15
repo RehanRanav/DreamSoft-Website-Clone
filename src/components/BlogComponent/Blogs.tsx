@@ -2,6 +2,7 @@ import { Card, CustomFlowbiteTheme } from "flowbite-react";
 import AsyncawaitBlogImg from "../../assets/BlogImages/asyncawaitImg.jpg";
 import IPaasBlogImg from "../../assets/BlogImages/IPaasImg.jpg";
 import HibernateBlogImg from "../../assets/BlogImages/hqlImg.jpg";
+import { motion } from "framer-motion";
 
 const Blogs = () => {
   const BlogData = [
@@ -39,8 +40,25 @@ const Blogs = () => {
 
   return (
     <div className="flex flex-col gap-8 items-center px-10 py-20">
-      <div className="text-4xl font-medium">Latest Blog Posts</div>
-      <div className="grid grid-cols-3 md:grid-cols-2 md:grid-rows-2 sm:grid-cols-1 sm:grid-rows-3 gap-8 px-4">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{
+          duration: 0.8,
+          ease: "easeIn",
+        }}
+        className="text-4xl font-medium"
+      >
+        Latest Blog Posts
+      </motion.div>
+      <motion.div
+      initial={{ opacity: 0, x: -50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{
+        duration: 0.8,
+        ease: "easeIn",
+      }}
+       className="grid grid-cols-3 md:grid-cols-2 md:grid-rows-2 sm:grid-cols-1 sm:grid-rows-3 gap-8 px-4">
         {BlogData.map((item, index) => (
           <Card
             className="max-w-smrounded-none shadow-none border-none overflow-hidden"
@@ -61,7 +79,7 @@ const Blogs = () => {
             </p>
           </Card>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };

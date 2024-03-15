@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { IoMdArrowDropleft } from "react-icons/io";
 
 const RightFooter = () => {
@@ -9,7 +10,14 @@ const RightFooter = () => {
     ["UX & UI"],
   ];
   return (
-    <div className="cursor-pointer">
+    <motion.div
+    initial={{ opacity: 0, x: 30 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    transition={{
+      duration: 0.8,
+      ease: "easeIn",
+    }}
+     className="cursor-pointer">
       <div className="text-4xl border-b py-4 whitespace-nowrap text-neutral font-medium">
         What We Offer
       </div>
@@ -19,7 +27,7 @@ const RightFooter = () => {
           <IoMdArrowDropleft className="text-neutral"/>
         </div>
       ))}
-    </div>
+    </motion.div>
   );
 };
 

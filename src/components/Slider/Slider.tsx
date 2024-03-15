@@ -1,7 +1,7 @@
 import { Carousel, CustomFlowbiteTheme } from "flowbite-react";
-import Slider1 from "../../assets/SliderImages/slider-1.jpg";
-import Slider2 from "../../assets/SliderImages/slider-2.jpg";
-import Slider3 from "../../assets/SliderImages/slider-3.jpg";
+import MobileAppDevelopmentImg from "../../assets/SliderImages/slider-1.jpg";
+import ExperiencedTeamImg from "../../assets/SliderImages/slider-2.jpg";
+import AwardWinningSoftwareImg from "../../assets/SliderImages/slider-3.jpg";
 import "./Slider.css";
 import { motion } from "framer-motion";
 import { useRef } from "react";
@@ -66,17 +66,17 @@ const Slider = () => {
   const scrollRef = useRef<HTMLDivElement | null>(null);
   const Slides = [
     {
-      image: Slider1,
+      image: MobileAppDevelopmentImg,
       title: "Mobile App Development",
       description: `Since our establishment, we have been delivering high-quality and sustainable software solutions for corporate purposes of worldwide businesses.`,
     },
     {
-      image: Slider2,
+      image: ExperiencedTeamImg,
       title: "Experienced Team",
       description: `We are a team of qualified software developers, aimed at creating unique and powerful tools for your business & everyday life.`,
     },
     {
-      image: Slider3,
+      image: AwardWinningSoftwareImg,
       title: "Award-Winning Software",
       description: `The software solutions developed by our company have been numerously awarded for usability and innovative features.`,
     },
@@ -90,7 +90,7 @@ const Slider = () => {
       },
       base: "w-10 h-1 bg-white ml-0.5 relative",
       wrapper:
-        "absolute h-fit w-fit flex-col gap-5 right-5 top-1/2 flex -translate-x-1/2",
+        "absolute h-fit w-fit flex-col gap-5 right-5 top-1/2 flex -translate-x-1/2 sm:top-auto sm:right-auto sm:bottom-5 sm:left-1/2 sm:flex-row",
     },
     scrollContainer: {
       base: "flex h-full snap-mandatory overflow-y-hidden overflow-x-scroll scroll-smooth rounded-none",
@@ -127,7 +127,7 @@ const Slider = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ root: scrollRef }}
-                className="text-7xl w-full text-center"
+                className="text-7xl font-medium md:text-5xl sm:text-4xl w-full text-center"
               >
                 {slider.title}
               </motion.div>

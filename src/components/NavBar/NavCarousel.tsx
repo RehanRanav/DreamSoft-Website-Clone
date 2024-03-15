@@ -5,7 +5,7 @@ import QManage from "../../assets/NavImages/navbar-img-4.jpg";
 import HomeCalender from "../../assets/NavImages/navbar-img-5.jpg";
 import MPlanner from "../../assets/NavImages/navbar-img-6.jpg";
 import { AiOutlineZoomIn } from "react-icons/ai";
-import { Carousel } from "flowbite-react";
+import { Carousel, CustomFlowbiteTheme } from "flowbite-react";
 
 const NavCarousel = () => {
 
@@ -15,8 +15,19 @@ const NavCarousel = () => {
     [HomeCalender, MPlanner],
   ];
 
+  const customTheme: CustomFlowbiteTheme["carousel"] = {
+    indicators: {
+      active: {
+        off: "bg-neutral",
+        on: "bg-primary",
+      },
+      base: "w-3 h-3 bg-white ml-0.5 relative",
+     }
+  };
+
   return (
     <Carousel
+    theme={customTheme}
       leftControl={` `}
       rightControl={` `}
       indicators={true}

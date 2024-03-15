@@ -24,11 +24,11 @@ const Hamburger = () => {
     setMenuopen(false);
   };
   return (
-    <div className="bg-white z-10 overflow-scroll">
+    <div className="bg-white z-10 pt-3 overflow-scroll">
       {menuOpen ? (
-        <IoArrowBackSharp size={36} onClick={closeMenu} />
+        <IoArrowBackSharp size={40} onClick={closeMenu} />
       ) : (
-        <MdMenu size={36} onClick={openMenu} />
+        <MdMenu size={40} onClick={openMenu} />
       )}
 
       <div
@@ -71,47 +71,53 @@ const Hamburger = () => {
 
         <div className="w-full">
           <Accordion className="rounded-none" collapseAll>
-            <div className="p-4 w-full bg-white hover:bg-primary text-black font-normal transition-colors duration-300 ease-linear">
+            <div className="p-4 w-full bg-white hover:bg-primary hover:text-white text-black font-normal transition-colors duration-300 ease-linear">
               <Link to="/">Home</Link>
             </div>
-            <div className="p-4 w-full bg-white hover:bg-primary text-black font-normal transition-colors duration-300 ease-linear">
+            <div className="p-4 w-full bg-white hover:bg-primary hover:text-white text-black font-normal transition-colors duration-300 ease-linear">
               <Link to="/">About Us</Link>
             </div>
-            <Accordion.Panel className="p-4 w-full bg-white hover:bg-primary text-black font-normal transition-colors duration-300 ease-linear">
+            <Accordion.Panel className="p-4 w-full bg-white hover:bg-primary hover:text-white text-black font-normal transition-colors duration-300 ease-linear">
               <Accordion.Title className="text-black font-normal">
                 Gallery
               </Accordion.Title>
               <Accordion.Content className="p-0">
                 <ul className="flex flex-col gap-4">
-                  {Gallery.map((item,index) => (
-                    <li className="w-full p-2 px-4 bg-white hover:bg-primary transition-colors duration-300 ease-linear" key={index}>
+                  {Gallery.map((item, index) => (
+                    <li
+                      className="w-full p-2 px-4 bg-white hover:bg-primary hover:text-white transition-colors duration-300 ease-linear"
+                      key={index}
+                    >
                       {item}
                     </li>
                   ))}
                 </ul>
               </Accordion.Content>
             </Accordion.Panel>
-            <div className="p-4 w-full bg-white hover:bg-primary text-black font-normal transition-colors duration-300 ease-linear">
+            <div className="p-4 w-full bg-white hover:bg-primary hover:text-white text-black font-normal transition-colors duration-300 ease-linear">
               <Link to="/">Pricing</Link>
             </div>
-            <Accordion.Panel className="p-4 w-full bg-white hover:bg-primary text-black font-normal transition-colors duration-300 ease-linear">
+            <Accordion.Panel className="p-4 w-full bg-white hover:bg-primary hover:text-white text-black font-normal transition-colors duration-300 ease-linear">
               <Accordion.Title className="text-black font-normal">
                 Blog
               </Accordion.Title>
               <Accordion.Content className="p-0">
                 <ul className="flex flex-col gap-3">
-                  {Blog.map((item,index) => (
-                    <li className="w-full p-2 px-4 bg-white hover:bg-primary transition-colors duration-300 ease-linear" key={index}>
+                  {Blog.map((item, index) => (
+                    <li
+                      className="w-full p-2 px-4 bg-white hover:bg-primary hover:text-white transition-colors duration-300 ease-linear"
+                      key={index}
+                    >
                       {item}
                     </li>
                   ))}
                 </ul>
               </Accordion.Content>
             </Accordion.Panel>
-            <div className="p-4 w-full bg-white hover:bg-primary text-black font-normal transition-colors duration-300 ease-linear">
+            <div className="p-4 w-full bg-white hover:bg-primary hover:text-white text-black font-normal transition-colors duration-300 ease-linear">
               <Link to="/">Contact Us</Link>
             </div>
-            <Accordion.Panel className="p-4 w-full bg-white hover:bg-primary text-black font-normal transition-colors duration-300 ease-linear">
+            <Accordion.Panel className="p-4 w-full bg-white hover:bg-primary hover:text-white text-black font-normal transition-colors duration-300 ease-linear">
               <Accordion.Title className="text-black font-normal">
                 Pages
               </Accordion.Title>
@@ -120,8 +126,11 @@ const Hamburger = () => {
                   Elements
                 </div>
                 <ul className="flex flex-col gap-3">
-                  {Elements.map((item,index) => (
-                    <li className="w-full p-2 px-4 bg-white hover:bg-primary transition-colors duration-300 ease-linear" key={index}>
+                  {Elements.map((item, index) => (
+                    <li
+                      className="w-full p-2 px-4 bg-white hover:bg-primary hover:text-white transition-colors duration-300 ease-linear"
+                      key={index}
+                    >
                       {item}
                     </li>
                   ))}
@@ -131,8 +140,11 @@ const Hamburger = () => {
                   Additional Pages
                 </div>
                 <ul className="flex flex-col gap-3">
-                  {AdditionalPages.map((item,index) => (
-                    <li className="w-full p-2 px-4 bg-white hover:bg-primary transition-colors duration-300 ease-linear" key={index}>
+                  {AdditionalPages.map((item, index) => (
+                    <li
+                      className="w-full p-2 px-4 bg-white hover:bg-primary transition-colors duration-300 ease-linear"
+                      key={index}
+                    >
                       {item}
                     </li>
                   ))}

@@ -3,6 +3,7 @@ import JillImg from "../../assets/TeamImages/uidesigner.jpg";
 import SamImg from "../../assets/TeamImages/seniordeveloper.jpg";
 import MaryImg from "../../assets/TeamImages/softwaredeveloper.jpg";
 import GetMoreComponent from "./GetMoreComponent";
+import { motion } from "framer-motion";
 
 const Team = () => {
   const Team = [
@@ -30,7 +31,15 @@ const Team = () => {
   return (
     <div className="w-full flex flex-col justify-center items-center mt-6">
       <div className="text-5xl mb-6 whitespace-nowrap"> Meet The Team</div>
-      <div className="w-fit grid grid-cols-4 md:grid-cols-2 md:grid-rows-2 sm:grid-cols-1 sm:grid-rows-4 justify-center items-center gap-8 p-4">
+      <motion.div
+        initial={{ x: 5, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{
+          duration: 0.8,
+          ease: "easeIn",
+        }}
+        className="w-fit grid grid-cols-4 md:grid-cols-2 md:grid-rows-2 sm:grid-cols-1 sm:grid-rows-4 justify-center items-center gap-8 p-4"
+      >
         {Team.map((item, index) => (
           <div
             className="relative overflow-hidden cursor-pointer group grayscale hover:grayscale-0 transition-all duration-500 ease-in-out"
@@ -47,7 +56,7 @@ const Team = () => {
             </div>
           </div>
         ))}
-      </div>
+      </motion.div>
 
       <GetMoreComponent />
     </div>

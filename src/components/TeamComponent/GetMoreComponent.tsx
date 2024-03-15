@@ -3,25 +3,29 @@ import { FC } from "react";
 import { TabComponentProps } from "../../inteface";
 import AnyAppWireframe from "../../assets/TeamImages/anyappwireframe.png";
 import SocialAppWireframe from "../../assets/TeamImages/socialappwireframe.png";
+import { motion } from "framer-motion";
 
-const TabComponent: FC<TabComponentProps> = ({ title, description }) => {
-  return (
-    <div className="flex flex-col gap-4 sm:justify-center sm:items-center">
-      <span className="text-lg">{title}</span>
-      <span>{description}</span>
-      <div className="mt-4 flex sm:flex-col gap-2">
-        <button className="px-6 py-4 border-2 border-primary bg-primary text-secondary font-medium tracking-wide  hover:text-black hover:border-black hover:bg-secondary transition-all duration-300 ease-in-out whitespace-nowrap">
-          GET IN TOUCH
-        </button>
-        <button className="px-12 py-4 border-2 border-black bg-secondary text-black font-medium tracking-wide  hover:text-primary hover:border-primary transition-all duration-300 ease-in-out whitespace-nowrap">
-          DOWNLOAD PRESENTATION
-        </button>
+
+const TabComponent: FC<TabComponentProps> = ({ title, description }) => {  return (
+      <div
+        className="flex flex-col gap-4 sm:justify-center sm:items-center"
+      >
+        <span className="text-lg">{title}</span>
+        <span>{description}</span>
+        <div className="mt-4 flex sm:flex-col gap-2">
+          <button className="px-6 py-4 border-2 border-primary bg-primary text-secondary font-medium tracking-wide  hover:text-black hover:border-black hover:bg-secondary transition-all duration-300 ease-in-out whitespace-nowrap">
+            GET IN TOUCH
+          </button>
+          <button className="px-12 py-4 border-2 border-black bg-secondary text-black font-medium tracking-wide  hover:text-primary hover:border-primary transition-all duration-300 ease-in-out whitespace-nowrap">
+            DOWNLOAD PRESENTATION
+          </button>
+        </div>
       </div>
-    </div>
   );
 };
 
 const GetMoreComponent = () => {
+
   const TabData = [
     {
       tab: "01",
@@ -86,7 +90,10 @@ const GetMoreComponent = () => {
                 className="text-4xl"
                 key={index}
               >
-                <TabComponent title={item.title} description={item.description} />
+                <TabComponent
+                  title={item.title}
+                  description={item.description}
+                />
               </Tabs.Item>
             ))}
           </Tabs>
@@ -94,10 +101,17 @@ const GetMoreComponent = () => {
       </div>
 
       <div className=" px-12 flex justify-center w-full">
-        <div className="grid grid-cols-2 sm:grid-cols-1 sm:grid-rows-2 gap-8 w-fit">
+        <motion.div
+        initial={{ opacity: 0, x: 10}}
+        whileInView={{ opacity:1, x:0}}
+        transition={{
+          duration: 0.8,
+          ease: 'easeIn'
+        }} 
+        className="grid grid-cols-2 sm:grid-cols-1 sm:grid-rows-2 gap-8 w-fit">
           <img src={AnyAppWireframe} alt="Any App You Wish" />
           <img src={SocialAppWireframe} alt="Socila Apps" />
-        </div>
+        </motion.div>
       </div>
     </div>
   );

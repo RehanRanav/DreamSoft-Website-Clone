@@ -13,7 +13,7 @@ const ProjectsCard: FC<ProjectsCardProps> = ({ ProjectImg, title }) => {
         ease: "easeIn",
       }}
       viewport={{ once: true }}
-      className="relative w-fit p-0 cursor-pointer group"
+      className="relative w-fit md:w-full md:flex md:justify-center p-0 cursor-pointer group"
     >
       <div
         className="h-fit w-fit bg-no-repeat bg-contain bg-center transition duration-300 ease-in-out relative cursor-pointer"
@@ -24,14 +24,15 @@ const ProjectsCard: FC<ProjectsCardProps> = ({ ProjectImg, title }) => {
         }}
       ></div>
       <motion.div
-      initial={{ y:-2, x:-2}}
-      whileHover={{ x: 0, y: 0 }}
-      transition={{
-        duration:0.15,
-        ease: "easeIn",
-      }}
-      viewport={{ once: true }} 
-      className="absolute bg-white lg:inset-0 md:bottom-0 md:left-1/2 md:-translate-x-1/2 md:right-1/2 md:w-fit md:h-fit md:p-2 md:m-0 m-5 p-6 flex-col gap-3 justify-center items-start hidden group-hover:flex transition-all duration-300 ease-in-out">
+        initial={{ y: -10, x: -10 }}
+        whileHover={{ x: 0, y: 0 }}
+        transition={{
+          duration: 0.15,
+          ease: "easeIn",
+        }}
+        viewport={{ once: true }}
+        className="absolute bg-white lg:inset-0 md:inset-auto md:-bottom-3 md:left-1/3 md:-translate-x-1/2  md:w-fit md:h-fit md:p-2 md:m-0 m-5 p-6 flex-col gap-3 justify-center items-start hidden group-hover:flex transition-all duration-300 ease-in-out"
+      >
         <div className="flex gap-5 items-center md:px-2">
           <AiOutlineZoomIn size={40} className="hover:text-primary" />
           <span className="text-xl text-primary hover:opacity-75 whitespace-nowrap">

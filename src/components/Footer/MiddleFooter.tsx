@@ -1,6 +1,15 @@
+import { motion } from "framer-motion";
+
 const MiddleFooter = () => {
   return (
-    <div className="pr-24 md:pr-0">
+    <motion.div
+    initial={{ opacity: 0, x: 30 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    transition={{
+      duration: 0.8,
+      ease: "easeIn",
+    }}
+     className="pr-24 md:pr-0">
       <div className="text-4xl text-neutral font-medium">
         Questions?
         <br /> Contact Us
@@ -23,7 +32,7 @@ const MiddleFooter = () => {
       <button className="w-full py-4 border-2 border-primary bg-primary text-secondary font-medium tracking-wide  hover:bg-black hover:border-black transition-all duration-300 ease-in-out whitespace-nowrap">
           SEND MESSAGE
         </button>
-    </div>
+    </motion.div>
   );
 };
 

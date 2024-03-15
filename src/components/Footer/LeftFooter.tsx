@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import logo from "../../assets/FooterImage/logo-dreamsoft.png";
 import {
   FaFacebookF,
@@ -8,7 +9,14 @@ import {
 
 const LeftFooter = () => {
   return (
-    <div className="pr-24 md:pr-0 cursor-pointer">
+    <motion.div
+    initial={{ opacity: 0, x: 30 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    transition={{
+      duration: 0.8,
+      ease: "easeIn",
+    }}
+     className="pr-24 md:pr-0 cursor-pointer">
       <div>
         <img src={logo} alt="DreamSoft" />
       </div>
@@ -51,7 +59,7 @@ const LeftFooter = () => {
           <FaInstagram size={28} className="text-white hover:text-primary" />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
