@@ -18,7 +18,7 @@ const ServiceCard: FC<ServiceCardProps> = ({ icon, title, description }) => {
             {title}
           </div>
         </div>
-        <div className="relative m-2 h-[2px] w-1/4 bg-slate-300 transition-all duration-500 ease-linear after:absolute after:content-[''] after:left-0 after:top-0 after:bg-primary after:w-full after:h-[2px] after:transform after:scale-x-0 after:transition-all after:duration-300 after:group-hover:-scale-x-150 "></div>
+        <div className="relative m-2 h-[2px] w-1/4 bg-neutral transition-all duration-500 ease-linear after:absolute after:content-[''] after:left-0 after:top-0 after:bg-primary after:w-full after:h-[2px] after:transform after:scale-x-0 after:transition-all after:duration-300 after:group-hover:-scale-x-150 "></div>
         <div className="text-center">{description}</div>
       </div>
     </Card>

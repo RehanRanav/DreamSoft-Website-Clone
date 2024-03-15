@@ -1,7 +1,11 @@
+import Blogs from "./BlogComponent/Blogs"
 import Experience from "./ExperienceComponent/Experience"
+import Review from "./FeedbackComponent/Review"
+import Footer from "./Footer/Footer"
 import Projects from "./ProjectsComponent/Projects"
 import Service from "./ServiceComponent/Service"
 import Slider from "./Slider/Slider"
+import Team from "./TeamComponent/Team"
 
 const Homepage = () => {
   return (
@@ -9,7 +13,11 @@ const Homepage = () => {
       <Slider/>
       <Service/> 
       <Projects/>
-      <Experience/>       
+      <Experience/> 
+      <Team/>
+      <Review/>
+      <Blogs/>    
+      <Footer/>  
     </div>
   )
 }
