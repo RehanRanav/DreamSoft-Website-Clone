@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import NavBar from "./NavBar";
 import { useRef } from "react";
 import { IoIosArrowUp } from "react-icons/io";
+import Footer from "./Footer";
 
 const Layout = () => {
   const buttonRef = useRef<HTMLButtonElement | null>(null);
@@ -26,13 +27,14 @@ const Layout = () => {
       <NavBar />
       <div className="mt-20">
         <Outlet />
+        <Footer/>
       </div>
       <button
         ref={buttonRef}
         onClick={scrollToTop}
         className="fixed bottom-8 right-8 bg-primary text-white transition-all duration-500 ease-in-out hover:bg-black"
       >
-        <IoIosArrowUp size={20} className="m-4"/>
+        <IoIosArrowUp size={20} className="m-4" />
       </button>
     </div>
   );

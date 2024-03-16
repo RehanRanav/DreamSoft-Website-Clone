@@ -10,6 +10,9 @@ export default {
     extend: {
       flex: {
         '2': '2 2 0%'
+      },
+      boxShadow: {
+        'custom': '0 0 2px 3px rgba(0, 0, 0, 0.1);',
       }
     },
     screens:{

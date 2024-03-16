@@ -15,6 +15,7 @@ import Hamburger from "./Hamburger";
 import "./styles.css";
 import NavCarousel from "./NavCarousel";
 import { AdditionalPages, Blog, Elements, Gallery } from "./NavLists";
+import { motion } from "framer-motion";
 
 const NavBar = () => {
   const [enableSearch, setEnableSearch] = useState(false);
@@ -92,7 +93,7 @@ const NavBar = () => {
               </ul>
             </Card>
           </Link>
-          <Link to="/" className="group">
+          <Link to="/contact" className="group">
             <div>Contact Us</div> <HoverlineEffect />
           </Link>
           <Link
@@ -141,10 +142,20 @@ const NavBar = () => {
           </Link>
         </div>
       ) : (
-        <div className="relative w-full flex-2">
-          <input
+        <div className="relative flex justify-end w-full flex-2">
+          <motion.input
+            initial={{
+              width: '50%'
+            }}
+            whileInView={{
+              width: '100%'
+            }}
+            transition={{
+              duration: 0.2,
+              ease: 'easeInOut'
+            }}
             type="text"
-            className={`block w-full transition-all duration-1000 ease-linear ${
+            className={`block transition-all duration-1000 ease-linear ${
               enableSearch ? `scale-x-100` : ``
             } z-10 p-4 ps-10 text-sm text-black border-none shadow-md border-gray-300 rounded-full bg-gray-50 outline-none focus:border-none`}
             placeholder="Search..."
