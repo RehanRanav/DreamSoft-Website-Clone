@@ -1,7 +1,7 @@
 import { useEffect, useMemo } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
-import { type Container, type ISourceOptions } from "@tsparticles/engine";
+import {  type ISourceOptions } from "@tsparticles/engine";
 
 const ParticalCanvas = () => {
   useEffect(() => {
@@ -9,11 +9,6 @@ const ParticalCanvas = () => {
       await loadSlim(engine);
     });
   }, []);
-
-  const particlesLoaded = async (container?: Container): Promise<void> => {
-    if (container) {
-    }
-  };
 
   const options: ISourceOptions = useMemo(
     () => ({
@@ -80,7 +75,7 @@ const ParticalCanvas = () => {
           value: 0.5,
         },
         shape: {
-          type: "circle",
+          type: 'circle',
         },
         size: {
           value: { min: 1, max: 5 },
@@ -95,7 +90,6 @@ const ParticalCanvas = () => {
     <div className="absolute inset-0 w-full h-full">
       <Particles
         id="tsparticles"
-        particlesLoaded={particlesLoaded}
         options={options}
         className="w-80 h-64 mt-36 ml-9"
       />

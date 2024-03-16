@@ -1,11 +1,11 @@
-import Blogs from "./BlogComponent/Blogs"
-import Experience from "./ExperienceComponent/Experience"
-import Review from "./FeedbackComponent/Review"
-import Footer from "./Footer/Footer"
-import Projects from "./ProjectsComponent/Projects"
-import Service from "./ServiceComponent/Service"
-import Slider from "./Slider/Slider"
-import Team from "./TeamComponent/Team"
+import Blogs from "./BlogComponent"
+import Experience from "./ExperienceComponent"
+import Review from "./FeedbackComponent"
+import Footer from "./Footer"
+import Projects from "./ProjectsComponent"
+import Service from "./ServiceComponent"
+import Slider from "./Slider"
+import Team from "./TeamComponent"
 
 const Homepage = () => {
   return (

@@ -2,7 +2,7 @@ import { Carousel, CustomFlowbiteTheme } from "flowbite-react";
 import MobileAppDevelopmentImg from "../../assets/SliderImages/slider-1.jpg";
 import ExperiencedTeamImg from "../../assets/SliderImages/slider-2.jpg";
 import AwardWinningSoftwareImg from "../../assets/SliderImages/slider-3.jpg";
-import "./Slider.css";
+import "./styles.css";
 import { motion } from "framer-motion";
 import { useRef } from "react";
 
@@ -28,7 +28,7 @@ const ChildTitleVariants = {
     opacity: 1,
     x: 0,
     transition: {
-      duration: 0.3,
+      duration: 0.8,
       ease: "easeInOut",
     },
   },
@@ -42,7 +42,7 @@ const ChildDescVariants = {
     opacity: 1,
     x: 0,
     transition: {
-      duration: 0.3,
+      duration: 0.8,
       ease: "easeInOut",
     },
   },
@@ -98,7 +98,7 @@ const Slider = () => {
   };
 
   return (
-    <div className="mt-20" ref={scrollRef}>
+    <div ref={scrollRef}>
       <Carousel
         theme={customTheme}
         leftControl={` `}

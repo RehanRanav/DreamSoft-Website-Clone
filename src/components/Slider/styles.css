@@ -21,6 +21,3 @@
     rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
     scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
-.SliderContainer [class="h-3 w-3 rounded-full bg-white dark:bg-gray-800"] {
-  background-color: #756aee !important;
-}

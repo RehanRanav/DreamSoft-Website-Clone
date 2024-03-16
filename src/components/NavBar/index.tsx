@@ -12,7 +12,7 @@ import {
   FaInstagram,
 } from "react-icons/fa6";
 import Hamburger from "./Hamburger";
-import "./NavBar.css";
+import "./styles.css";
 import NavCarousel from "./NavCarousel";
 import { AdditionalPages, Blog, Elements, Gallery } from "./NavLists";
 
@@ -50,7 +50,7 @@ const NavBar = () => {
             <div>Home</div>
             <HoverlineEffect />
           </Link>
-          <Link to="/" className="group">
+          <Link to="/about" className="group">
             <div>About Us</div> <HoverlineEffect />
           </Link>
           <Link

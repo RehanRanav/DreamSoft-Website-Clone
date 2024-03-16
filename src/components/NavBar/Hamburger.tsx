@@ -9,7 +9,7 @@ import { IoSearchOutline } from "react-icons/io5";
 import { Accordion } from "flowbite-react";
 import { Link } from "react-router-dom";
 import { AdditionalPages, Blog, Elements, Gallery } from "./NavLists";
-import './NavBar.css'
+import './styles.css'
 
 const Hamburger = () => {
   const [menuOpen, setMenuopen] = useState(false);
