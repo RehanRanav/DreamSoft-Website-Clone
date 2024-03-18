@@ -58,7 +58,9 @@ const NavBar = () => {
             to="/"
             className="group relative h-16 flex flex-col justify-center items-center"
           >
+            <Link to="/gallery">
             <div>Gallery</div> <HoverlineEffect />
+            </Link>
             <Card className="z-10 rounded-none font-semibold text-base w-64 px-4 mt-2 absolute left-0 whitespace-break-spaces hidden group-hover:block hover:block group-hover:transform group-hover:top-14 transition-all duration-300 ease-in bg-white">
                 <ul className="flex flex-col gap-3">
                   {Gallery.map((item, index) => (

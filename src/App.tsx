@@ -4,6 +4,7 @@ import Homepage from "./components/Homepage";
 import Layout from "./components/Layout";
 import About from "./components/About";
 import ContactUS from './components/ContactUS.tsx'
+import Gallery from "./components/Gallery.tsx";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Homepage />} />
             <Route path="/about" element={<About />} />
+            <Route path="/gallery" element={<Gallery/>}/>
             <Route path="/contact" element={<ContactUS />} />
           </Route>
         </Routes>
