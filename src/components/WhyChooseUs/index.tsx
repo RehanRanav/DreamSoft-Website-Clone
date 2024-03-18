@@ -12,7 +12,7 @@ function WhyChoose() {
       tabitem: {
         styles: {
           underline: {
-            base: "text-2xl text-neutral rounded-none tracking-wide",
+            base: "text-2xl sm:text-lg text-neutral rounded-none tracking-wide",
             active: {
               on: "text-primary border-b-2 sm:border-t-2 border-primary focus:ring-0",
               off: "hover:text-primary focus:ring-0",
@@ -24,8 +24,8 @@ function WhyChoose() {
   };
 
   return (
-    <div className="grid grid-cols-2 pt-20 pb-12 px-10">
-      <div>
+    <div className="grid grid-cols-2 md:grid-cols-1 md:grid-rows-2 justify-center items-center md:gap-4 pt-20 pb-12 px-10">
+      <div className="h-fit w-fit">
         <img src={WhyChooseImg} alt="Why Choose Us" />
       </div>
       <div className="">
@@ -36,7 +36,7 @@ function WhyChoose() {
           <Tabs
             aria-label="Tabs with underline"
             style="underline"
-            className="flex justify-between md:px-10 sm:px-0 sm:text-center"
+            className="flex sm:text-center"
             theme={customTheme}
           >
             <Tabs.Item active title="EXPERIENCE">
@@ -50,7 +50,7 @@ function WhyChoose() {
                 </div>
                 <div className="flex flex-col">
                   <div className="grid grid-cols-1 grid-rows-2 gap-4">
-                    <div className="font-medium text-neutral tracking-wider text-lg">
+                    <div className="font-medium text-neutral tracking-wider text-lg md:text-base sm:text-left">
                       WINDOWS APPLICATIONS
                     </div>
                     <div>
@@ -85,7 +85,7 @@ function WhyChoose() {
                     </div>
                   </div>
                   <div className="grid grid-cols-1 grid-rows-2 gap-4">
-                    <div className="font-medium text-neutral tracking-wider text-lg">
+                    <div className="font-medium text-neutral tracking-wider text-lg md:text-base sm:text-left">
                       IOS/MACOS APPS
                     </div>
                     <div>
@@ -120,7 +120,7 @@ function WhyChoose() {
                     </div>
                   </div>
                   <div className="grid grid-cols-1 grid-rows-2 gap-4">
-                    <div className="font-medium text-neutral tracking-wider text-lg">
+                    <div className="font-medium text-neutral tracking-wider text-lg md:text-base sm:text-left">
                       ANDROID APPLICATIONS
                     </div>
                     <div>
@@ -176,10 +176,10 @@ function WhyChoose() {
                     ></circle>
                     <motion.circle
                       initial={{
-                        pathOffset : 0,
+                        pathOffset: 0,
                       }}
                       whileInView={{
-                        pathOffset : 1,
+                        pathOffset: 1,
                       }}
                       transition={{
                         duration: 1,

@@ -1,6 +1,6 @@
 import Blogs from "./BlogComponent";
 import Experience from "./ExperienceComponent";
-import Review from "./FeedbackComponent";
+import Review from "./FeedbackComponent/Home";
 import Projects from "./ProjectsComponent";
 import Service from "./ServiceComponent";
 import Slider from "./Slider";

@@ -1,7 +1,7 @@
 import { Avatar, Card } from "flowbite-react";
-import AvatarCatherine from "../../assets/ReviewImages/avatarcatherine.jpg";
-import AvatarRupert from "../../assets/ReviewImages/avatarrupert.jpg";
-import AvatarSamantha from "../../assets/ReviewImages/avatarsamantha.jpg";
+import AvatarCatherine from "../../../assets/ReviewImages/avatarcatherine.jpg";
+import AvatarRupert from "../../../assets/ReviewImages/avatarrupert.jpg";
+import AvatarSamantha from "../../../assets/ReviewImages/avatarsamantha.jpg";
 import { motion } from "framer-motion";
 
 const Review = () => {
