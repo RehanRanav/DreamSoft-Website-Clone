@@ -13,8 +13,8 @@ class MapContainer extends Component<any, any> {
         google={this.props.google}
         style={{ width: "100%", height: "100%" }}
         initialCenter={{
-          lat: 28.70406,
-          lng: 77.102493,
+          lat: 23.014509,
+          lng: 72.591759,
         }}
       ></Map>
     );

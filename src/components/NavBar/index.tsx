@@ -1,6 +1,4 @@
 import { useRef, useState } from "react";
-import { Link } from "react-router-dom";
-import { Card } from "flowbite-react";
 import logo from "../../assets/NavImages/logo-dreamsoft.png";
 import { IoSearchOutline } from "react-icons/io5";
 import { PiShareNetworkLight } from "react-icons/pi";
@@ -13,9 +11,8 @@ import {
 } from "react-icons/fa6";
 import Hamburger from "./Hamburger";
 import "./styles.css";
-import NavCarousel from "./NavCarousel";
-import { AdditionalPages, Blog, Elements, Gallery } from "./NavLists";
 import { motion } from "framer-motion";
+import NavLinks from "./NavLinks";
 
 const NavBar = () => {
   const [enableSearch, setEnableSearch] = useState(false);
@@ -24,10 +21,6 @@ const NavBar = () => {
   const handleSearchtoggle = () => {
     setEnableSearch(!enableSearch);
   };
-
-  const HoverlineEffect = () => (
-    <div className="w-full h-1 bg-primary opacity-0 group-hover:opacity-100 group-hover:transform group-hover:-translate-y-[2px] transition-opacity duration-500 ease-in-out"></div>
-  );
 
   const showShareOptions = () => {
     if (menuRef.current) {
@@ -46,115 +39,19 @@ const NavBar = () => {
         <img src={logo} alt="DreamSoft" className="lg:w-36 lg:h-10 " />
       </div>
       {!enableSearch ? (
-        <div className="flex-2 flex justify-between items-center gap-2 h-4 font-sans font-medium text-lg whitespace-nowrap md:hidden">
-          <Link to="/" className="group">
-            <div>Home</div>
-            <HoverlineEffect />
-          </Link>
-          <Link to="/about" className="group">
-            <div>About Us</div> <HoverlineEffect />
-          </Link>
-          <Link
-            to="/"
-            className="group relative h-16 flex flex-col justify-center items-center"
-          >
-            <Link to="/gallery">
-            <div>Gallery</div> <HoverlineEffect />
-            </Link>
-            <Card className="z-10 rounded-none font-semibold text-base w-64 px-4 mt-2 absolute left-0 whitespace-break-spaces hidden group-hover:block hover:block group-hover:transform group-hover:top-14 transition-all duration-300 ease-in bg-white">
-                <ul className="flex flex-col gap-3">
-                  {Gallery.map((item, index) => (
-                    <li
-                      className="hover:border-l-4 hover:border-primary hover:pl-4 transition-all duration-300 ease-in-out"
-                      key={index}
-                    >
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-            </Card>
-          </Link>
-          <Link to="/" className="group">
-            <div>Pricing</div> <HoverlineEffect />
-          </Link>
-          <Link
-            to="/"
-            className="group relative h-16 flex flex-col justify-center items-center"
-          >
-            <div>Blog</div> <HoverlineEffect />
-            <Card className="z-10 rounded-none font-semibold text-base w-60 px-4 mt-2 absolute left-0 whitespace-break-spaces hidden group-hover:block hover:block group-hover:transform group-hover:top-14 transition-all duration-300 ease-in bg-white">
-              <ul className="flex flex-col gap-3">
-                {Blog.map((item, index) => (
-                  <li
-                    className="hover:border-l-4 hover:border-primary hover:pl-4 transition-all duration-300 ease-in-out"
-                    key={index}
-                  >
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </Card>
-          </Link>
-          <Link to="/contact" className="group">
-            <div>Contact Us</div> <HoverlineEffect />
-          </Link>
-          <Link
-            to="/"
-            className="group relative h-16 flex flex-col justify-center items-center"
-          >
-            <div>Pages</div> <HoverlineEffect />
-            <Card className="z-10 rounded-none font-semibold text-base w-screen px-4 pb-5 mt-2 absolute -right-[158px] whitespace-nowrap hidden group-hover:block hover:block group-hover:transform group-hover:top-14 transition-all duration-1000 ease-in bg-white">
-              <div className="grid grid-cols-3 gap-4">
-                <div className="border-r-2 font-normal">
-                  <div className="text-lg pb-4">Elements</div>
-                  <ul className="grid grid-cols-2 grid-rows-5 gap-4 ">
-                    {Elements.map((item, index) => (
-                      <li
-                        className="hover:border-l-4 hover:border-primary hover:pl-4 transition-all duration-300 ease-in-out"
-                        key={index}
-                      >
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="border-r-2 font-normal">
-                  <div className="text-lg pb-4">Additional Pages</div>
-                  <ul className="grid grid-cols-2 grid-rows-6 gap-4">
-                    {AdditionalPages.map((item, index) => (
-                      <li
-                        className="hover:border-l-4 hover:border-primary hover:pl-4 transition-all duration-300 ease-in-out whitespace-normal"
-                        key={index}
-                      >
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div>
-                  <div>Recent Projects</div>
-                  <div className="px-4 h-56 w-96 cursor-pointer">
-                    <NavCarousel />
-                  </div>
-                </div>
-              </div>
-            </Card>
-          </Link>
-        </div>
+        <NavLinks />
       ) : (
         <div className="relative flex justify-end w-full flex-2">
           <motion.input
             initial={{
-              width: '50%'
+              width: "50%",
             }}
             whileInView={{
-              width: '100%'
+              width: "100%",
             }}
             transition={{
               duration: 0.2,
-              ease: 'easeInOut'
+              ease: "easeInOut",
             }}
             type="text"
             className={`block transition-all duration-1000 ease-linear ${

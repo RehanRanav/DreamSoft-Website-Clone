@@ -9,7 +9,7 @@ import { IoSearchOutline } from "react-icons/io5";
 import { Accordion } from "flowbite-react";
 import { Link } from "react-router-dom";
 import { AdditionalPages, Blog, Elements, Gallery } from "./NavLists";
-import './styles.css'
+import "./styles.css";
 
 const Hamburger = () => {
   const [menuOpen, setMenuopen] = useState(false);
@@ -75,11 +75,11 @@ const Hamburger = () => {
               <Link to="/">Home</Link>
             </div>
             <div className="p-4 w-full bg-white hover:bg-primary hover:text-white text-black font-normal transition-colors duration-300 ease-linear">
-              <Link to="/">About Us</Link>
+              <Link to="/about">About Us</Link>
             </div>
             <Accordion.Panel className="p-4 w-full bg-white hover:bg-primary hover:text-white text-black font-normal transition-colors duration-300 ease-linear">
               <Accordion.Title className="text-black font-normal">
-                Gallery
+                <Link to="/gallery">Gallery</Link>
               </Accordion.Title>
               <Accordion.Content className="p-0">
                 <ul className="flex flex-col gap-4">
@@ -88,7 +88,7 @@ const Hamburger = () => {
                       className="w-full p-2 px-4 bg-white hover:bg-primary hover:text-white transition-colors duration-300 ease-linear"
                       key={index}
                     >
-                      {item}
+                      <Link to="/gallery">{item}</Link>
                     </li>
                   ))}
                 </ul>
@@ -115,7 +115,7 @@ const Hamburger = () => {
               </Accordion.Content>
             </Accordion.Panel>
             <div className="p-4 w-full bg-white hover:bg-primary hover:text-white text-black font-normal transition-colors duration-300 ease-linear">
-              <Link to="/">Contact Us</Link>
+              <Link to="/contact">Contact Us</Link>
             </div>
             <Accordion.Panel className="p-4 w-full bg-white hover:bg-primary hover:text-white text-black font-normal transition-colors duration-300 ease-linear">
               <Accordion.Title className="text-black font-normal">
