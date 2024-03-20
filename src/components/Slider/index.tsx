@@ -120,7 +120,7 @@ const Slider = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ root: scrollRef }}
-              className="m-auto h-full w-full flex flex-col gap-4 justify-center items-center font-sans"
+              className="m-auto h-full w-full flex flex-col gap-4 justify-center items-center"
             >
               <motion.div
                 variants={ChildTitleVariants}
@@ -146,7 +146,7 @@ const Slider = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ root: scrollRef }}
-                className="relative h-14 w-48 bg-primary text-white font-semibold overflow-hidden transition-all duration-1000 ease-linear before:absolute before:bg-black before:content-[''] before:top-0 before:left-1/2 before:transform before:-translate-x-1/2 before:z-10 before:transition-all before:duration-500 before:w-0 before:h-full before:hover:w-full"
+                className="relative h-14 w-52 bg-primary text-white overflow-hidden transition-all duration-1000 ease-linear before:absolute before:bg-black before:content-[''] before:top-0 before:left-1/2 before:transform before:-translate-x-1/2 before:z-10 before:transition-all before:duration-500 before:w-0 before:h-full before:hover:w-full"
               >
                 <span className="z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                   {" "}

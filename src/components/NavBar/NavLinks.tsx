@@ -21,7 +21,7 @@ const NavLinks = () => {
 
   return (
     <Navbar theme={customTheme} className="list-none">
-      <div className="flex-2 flex justify-between items-center gap-2 h-4 font-sans font-medium text-lg whitespace-nowrap md:hidden">
+      <div className="flex-2 flex justify-between items-center gap-2 h-4 font-poppins font-medium text-lg whitespace-nowrap md:hidden">
         <Navbar.Link as={Link} to="/" active={location.pathname === '/'}>
           Home
         </Navbar.Link>

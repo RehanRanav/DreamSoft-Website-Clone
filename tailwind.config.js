@@ -28,6 +28,9 @@ export default {
       'neutral-transparent': "#11111180",
       'footer-bg': '#1b1929',
       'footer-icon': '#333144'
+    },
+    fontFamily:{
+      'poppins': ['Poppins']
     }
   },
   plugins: [

@@ -1,11 +1,16 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import NavBar from "./NavBar";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { IoIosArrowUp } from "react-icons/io";
 import Footer from "./Footer";
 
 const Layout = () => {
   const buttonRef = useRef<HTMLButtonElement | null>(null);
+  const { pathname } = useLocation();
+
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[pathname]);
 
   window.addEventListener("scroll", () => {
     if (window.pageYOffset > 100 && buttonRef.current) {
@@ -23,7 +28,7 @@ const Layout = () => {
   };
 
   return (
-    <div>
+    <div className="font-poppins">
       <NavBar />
       <div className="mt-20">
         <Outlet />

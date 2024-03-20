@@ -98,7 +98,7 @@ const Gallery = () => {
           variants={ParentDivVariants}
           initial="hidden"
           whileInView="visible"
-          className="m-auto h-full w-full flex flex-col gap-8 justify-center items-center font-sans"
+          className="m-auto h-full w-full flex flex-col gap-8 justify-center items-center"
         >
           <div className="text-7xl font-medium md:text-5xl sm:text-4xl w-full text-center">
             Grid Gallery
