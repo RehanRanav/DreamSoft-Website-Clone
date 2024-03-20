@@ -7,7 +7,6 @@ import QManage from "../assets/ProjectsImages/Project3.jpg";
 import WearherCast from "../assets/ProjectsImages/Project4.jpg";
 import MPlanner from "../assets/ProjectsImages/Project6.jpg";
 import WiseMoney from "../assets/ProjectsImages/Project8.jpg";
-import { useState } from "react";
 import { CustomFlowbiteTheme, Tabs } from "flowbite-react";
 
 const ParentDivVariants = {
@@ -64,7 +63,6 @@ const ProjectCards = [
 ];
 
 const Gallery = () => {
-  const [updatedProjectCards, setUpdatedProjectCards] = useState(ProjectCards);
 
   const customTheme: CustomFlowbiteTheme["tabs"] = {
     tablist: {
@@ -136,7 +134,7 @@ const Gallery = () => {
         </div>
       </div>
       <div className="w-full px-10 pb-20 grid justify-center items-center grid-cols-3 md:grid-cols-1 gap-x-4 gap-y-10">
-        {updatedProjectCards.map((item, index) => (
+        {ProjectCards.map((item, index) => (
           <div className="w-full flex flex-col items-center justify-center">
             <motion.div
               initial={{ x: -50, opacity: 0 }}
