@@ -24,10 +24,10 @@ const ProjectsCard: FC<ProjectsCardProps> = ({ ProjectImg, title }) => {
         }}
       ></div>
       <motion.div
-        initial={{ y: -10, x: -10 }}
-        whileHover={{ x: 0, y: 0 }}
+        initial={{ y: -4, x: -4, opacity: 0 }}
+        whileHover={{ x: 0, y: 0 , opacity: 1}}
         transition={{
-          duration: 0.15,
+          duration: 0.2,
           ease: "easeIn",
         }}
         viewport={{ once: true }}

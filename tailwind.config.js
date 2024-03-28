@@ -10,6 +10,10 @@ export default {
     extend: {
       flex: {
         '2': '2 2 0%'
+      },
+      boxShadow: {
+        'custom': '0 0 2px 3px rgba(0, 0, 0, 0.1);',
+        'card-shadow': '2px 3px 6px 0 rgba(0, 0, 0, 0.17)'
       }
     },
     screens:{
@@ -24,6 +28,9 @@ export default {
       'neutral-transparent': "#11111180",
       'footer-bg': '#1b1929',
       'footer-icon': '#333144'
+    },
+    fontFamily:{
+      'poppins': ['Poppins']
     }
   },
   plugins: [

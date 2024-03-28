@@ -25,12 +25,9 @@ const Experience = () => {
           >
             <ParticalCanvas />
             <div className="text-primary w-full h-full bg-secondary -z-10">
-              <CountUp
-                start={4}
-                end={10}
-                duration={0.5}
-                enableScrollSpy={true}
-              />
+              <CountUp start={4} end={10} duration={0.5} enableScrollSpy={true}>
+                {({ countUpRef }) => <span ref={countUpRef} />}
+              </CountUp>
             </div>
           </motion.div>
           <div className="w-fit flex p-4 flex-col flex-1 gap-4 justify-start items-start">
@@ -59,7 +56,9 @@ const Experience = () => {
                   end={2}
                   duration={0.5}
                   enableScrollSpy={true}
-                />
+                >
+                  {({ countUpRef }) => <span ref={countUpRef} />}
+                </CountUp>
               </span>
               <span className="text-6xl">K</span>
             </div>
@@ -74,7 +73,9 @@ const Experience = () => {
                   end={40}
                   duration={0.5}
                   enableScrollSpy={true}
-                />
+                >
+                  {({ countUpRef }) => <span ref={countUpRef} />}
+                </CountUp>
               </span>
             </div>
             <div className="text-neutral tracking-widest">CONSULTANTS</div>
@@ -88,7 +89,9 @@ const Experience = () => {
                   end={12}
                   duration={0.5}
                   enableScrollSpy={true}
-                />
+                >
+                  {({ countUpRef }) => <span ref={countUpRef} />}
+                </CountUp>
               </span>
             </div>
             <div className="text-neutral tracking-widest">AWARDS WON</div>
@@ -102,7 +105,9 @@ const Experience = () => {
                   end={160}
                   duration={0.5}
                   enableScrollSpy={true}
-                />
+                >
+                  {({ countUpRef }) => <span ref={countUpRef} />}
+                </CountUp>
               </span>
             </div>
             <div className="text-neutral tracking-widest">EMPLOYEES</div>
