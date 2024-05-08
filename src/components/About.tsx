@@ -69,7 +69,7 @@ const About = () => {
                 {({ countUpRef }) => <span ref={countUpRef} />}
               </CountUp>
             </span>
-            <span className="text-2xl">Awards Won</span>
+            <span className="text-2xl text-center">Awards Won</span>
           </div>
           <div className="flex flex-col justify-center items-center lg:border-r sm:border-r-0 sm:border-b p-4 border-neutral">
             <span className="text-8xl">
@@ -82,7 +82,7 @@ const About = () => {
                 {({ countUpRef }) => <span ref={countUpRef} />}
               </CountUp>
             </span>
-            <span className="text-2xl">Apps Developed</span>
+            <span className="text-2xl text-center">Apps Developed</span>
           </div>
           <div className="flex flex-col justify-center items-center border-r sm:border-r-0 sm:border-b p-4 border-neutral">
             <span className="text-8xl">
@@ -96,7 +96,7 @@ const About = () => {
                 {({ countUpRef }) => <span ref={countUpRef} />}
               </CountUp>
             </span>
-            <span className="text-2xl">Satisfied Customers</span>
+            <span className="text-2xl text-center">Satisfied Customers</span>
           </div>
           <div className="flex flex-col justify-center items-center p-4">
             <span className="text-8xl">
@@ -104,7 +104,7 @@ const About = () => {
                 {({ countUpRef }) => <span ref={countUpRef} />}
               </CountUp>
             </span>
-            <span className="text-2xl">Team Members</span>
+            <span className="text-2xl text-center">Team Members</span>
           </div>
         </div>
       </div>

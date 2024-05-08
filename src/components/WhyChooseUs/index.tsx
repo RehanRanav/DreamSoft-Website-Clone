@@ -25,11 +25,19 @@ function WhyChoose() {
   };
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-1 md:grid-rows-2 md:gap-4 pt-20 pb-12 px-10">
-      <div className="w-full flex justify-center">
-        <img src={WhyChooseImg} alt="Why Choose Us" />
+    <div className="grid grid-cols-2 h-fit md:flex md:flex-col md:gap-4 pt-20 pb-12 px-10">
+      <div className="w-full flex justify-center items-center h-full">
+
+      <div className="w-fit bg-no-repeat bg-contain bg-center"
+      style={{
+        backgroundImage: `url(${WhyChooseImg})`,
+        width: "380px",
+        height: "380px"
+      }}
+      >
+        </div>
       </div>
-      <div className="mt-10 md:px-20">
+      <div className="mt-10 ">
         <div className="text-neutral text-4xl mb-4 whitespace-nowrap">
           Why Choose Us
         </div>
@@ -160,22 +168,9 @@ function WhyChoose() {
             </Tabs.Item>
             <Tabs.Item active title="SKILL">
               <div className="text-black font-medium">
-                <div className="circle_box">
-                  <div className="relative h-fit w-fit">
-                    <svg>
-                      <circle cx="100" cy="100" r="95" />
-                      <circle cx="100" cy="100" r="95" />
-                    </svg>
-                    <span>
-                      <CountUp
-                        start={10}
-                        end={87}
-                        suffix="%"
-                        enableScrollSpy={true}
-                      >
-                        {({ countUpRef }) => <span ref={countUpRef} />}
-                      </CountUp>
-                    </span>
+                <div className="flex flex-col items-center w-80 py-12 bg-primary">
+                  <div className="relative h-40 w-40 bg-neutral rounded-full coni">
+
                   </div>
                 </div>
               </div>

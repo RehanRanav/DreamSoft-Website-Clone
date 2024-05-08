@@ -117,7 +117,7 @@ const Gallery = () => {
         </motion.div>
       </div>
 
-      <div className="pt-20">
+      <div className="pt-20 md:hidden">
         <div className="w-full">
           <Tabs
             aria-label="Tabs with underline"

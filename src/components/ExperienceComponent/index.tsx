@@ -24,7 +24,7 @@ const Experience = () => {
             className="relative text-[337px] w-96 h-fit font-bold text-primary -tracking-widest cursor-pointer"
           >
             <ParticalCanvas />
-            <div className="text-primary w-full h-full bg-secondary -z-10">
+            <div className="text-primary w-full h-full bg-secondary -z-10 text-center">
               <CountUp start={4} end={10} duration={0.5} enableScrollSpy={true}>
                 {({ countUpRef }) => <span ref={countUpRef} />}
               </CountUp>

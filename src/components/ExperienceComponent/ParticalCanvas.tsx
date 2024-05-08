@@ -91,7 +91,7 @@ const ParticalCanvas = () => {
       <Particles
         id="tsparticles"
         options={options}
-        className="w-80 h-64 mt-36 ml-9"
+        className="w-80 h-72 mt-28 ml-8"
       />
     </div>
   );
